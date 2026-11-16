@@ -29,6 +29,7 @@ export default defineConfig({
 				},
 			],
 			lastUpdated: true,
+			routeMiddleware: './src/routeData.ts',
 			plugins: [starlightLinksValidator()],
 			sidebar: [
 				'index',
