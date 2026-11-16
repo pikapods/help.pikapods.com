@@ -21,6 +21,11 @@
 	--sl-color-blue: #78909c;
 	--sl-color-blue-high: #cfd8dc;
 
+	/* Tips use primary (green) */
+	--sl-color-purple-low: #1b5e20;
+	--sl-color-purple: #4caf50;
+	--sl-color-purple-high: #c8e6c9;
+
 	--sl-color-red: #e53935;
 }
 
@@ -45,6 +50,10 @@
 	--sl-color-blue-low: #eceff1;
 	--sl-color-blue: #607d8b;
 	--sl-color-blue-high: #37474f;
+
+	--sl-color-purple-low: #e8f5e9;
+	--sl-color-purple: #43a047;
+	--sl-color-purple-high: #2e7d32;
 
 	--sl-color-red: #e53935;
 }
