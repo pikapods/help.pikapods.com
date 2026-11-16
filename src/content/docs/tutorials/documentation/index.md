@@ -1,0 +1,19 @@
+---
+title: Documentation
+description: Discover apps that can help with organizing notes and documentation in a wiki-style knowledge system.
+sidebar:
+  label: Overview
+  order: 0
+---
+
+Explore tutorials and guides to effectively create, organize, and manage documentation using PikaPods documentation apps.
+
+## BookStack
+
+BookStack is a versatile documentation platform designed to help you create, organize, and collaborate on documentation and knowledge-sharing. Discover how to leverage its features for seamless documentation management.
+
+- [Part 1: Basics](/tutorials/documentation/bookstack-1-basics): Learn the fundamental aspects of BookStack, including creating books, chapters, pages, and shelves.
+
+## Explore More Documentation Apps
+
+PikaPods offers a range of [other documentation](https://www.pikapods.com/apps#documentation) apps that cater to various documentation management needs. Stay tuned for upcoming tutorials and guides on these apps to further enhance your documentation management experience.
