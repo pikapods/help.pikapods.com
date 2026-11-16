@@ -4,9 +4,3 @@ dist/
 .DS_Store
 .claude
 .env
-
-# Jekyll leftovers
-_site/
-.sass-cache/
-.jekyll-cache/
-.jekyll-metadata
