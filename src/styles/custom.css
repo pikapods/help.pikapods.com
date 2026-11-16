@@ -69,6 +69,21 @@ header.header {
 	--sl-color-text-invert: #ffffff;
 }
 
+/* Tighter heading scale; Starlight's default h2 is close to the page title. */
+:root {
+	--sl-text-h2: 1.75rem;
+	--sl-text-h3: 1.375rem;
+	--sl-text-h4: 1.125rem;
+	--sl-text-h5: 1rem;
+}
+
+.sl-markdown-content a {
+	text-decoration: none;
+}
+.sl-markdown-content a:hover {
+	text-decoration: underline;
+}
+
 figcaption {
 	font-size: var(--sl-text-sm);
 	text-align: right;
@@ -82,6 +97,11 @@ video {
 .youtube-video {
 	aspect-ratio: 16 / 9;
 	width: 100%;
+}
+
+/* Site title uses --sl-text-h4 by default; keep it independent of the heading scale. */
+.site-title {
+	font-size: 1.5rem;
 }
 
 /* The logo's viewBox has generous padding. */
