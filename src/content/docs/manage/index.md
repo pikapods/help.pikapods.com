@@ -1,37 +1,14 @@
 ---
-title: Pod Management
-description: PikaPods allows you to easily run a large number of open source web apps. In this section you can learn how to manage custom domains, files, databases and backups for your pods.
-sidebar:
-  label: Overview
-  order: 0
+title: Manage Your Pods
+description: Learn how to manage custom domains, files, databases, backups and access restrictions for your PikaPods pods.
 ---
 
-It's easy to get started with our pods, but advanced features are there if you need them:
+Everything you can do with a pod after it's running:
 
-## [Getting Started](/manage/getting-started)
-
-New to PikaPods? Learn how to create an account, deploy your first app, and start using it in minutes. No credit card required and you get $5 in free credits to explore.
-
-## [Custom Domain](/manage/custom-domains)
-
-Attach your own domain to a pod. Make your app accessible under your own brand, like blog.yourdomain.com. We automatically handle SSL certificates to keep your connection secure.
-
-## [Files](/manage/files)
-
-Access pod files using SFTP. Upload, download, and manage your pod's files directly from your computer. This gives you full control over your data and makes migrations easy.
-
-## [Database](/manage/database)
-
-Manage the pod's database. View, edit, and export your app's data when needed. Useful for advanced customizations, migrations, or manual data corrections.
-
-## [Backup](/manage/backup)
-
-Learn how to perform backups of pod data. Keep your data safe with automatic daily backups to your own storage. Backups are encrypted and incremental, so only changes are transferred.
-
-## [Debug](/manage/debug)
-
-Troubleshoot and debug your pod. Find and fix issues quickly by viewing application logs. Learn how to diagnose startup problems and get your pod running again.
-
-## [Firewall](/manage/firewall)
-
-Restrict access to your pod using an IP allowlist. Secure your application by only allowing connections from trusted IP addresses.
+- [Getting Started](/manage/getting-started): Create an account and run your first app.
+- [Custom Domains](/manage/custom-domains): Make a pod available under your own domain name.
+- [Access Files (SFTP)](/manage/files): Upload, download and edit a pod's files.
+- [Database Access](/manage/database): View, edit, import or export an app's database.
+- [Backups](/manage/backup): Set up automatic backups to storage you control.
+- [Troubleshooting](/manage/debug): Check logs and fix a pod that won't start.
+- [Firewall](/manage/firewall): Only allow selected IP addresses to reach a pod.

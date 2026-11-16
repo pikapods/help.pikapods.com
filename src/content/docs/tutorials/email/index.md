@@ -16,4 +16,4 @@ Listmonk is a powerful and flexible email list manager that enables you to send 
 
 ## Explore More Email-Related Apps
 
-Explore a variety of [email-related apps](https://www.pikapods.com/apps#email) offered by PikaPods, designed to enhance your email management experience. Stay tuned for additional tutorials and guides on these apps.
+Explore a variety of [email-related apps](https://www.pikapods.com/apps#email) offered by PikaPods, designed to enhance your email management experience.

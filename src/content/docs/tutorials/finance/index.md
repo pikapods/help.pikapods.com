@@ -16,4 +16,4 @@ Actual Budget is a comprehensive budgeting and expense tracking app that helps y
 
 ## Explore Finance-Related Apps
 
-Discover a range of [finance-related apps](https://www.pikapods.com/apps#finance) offered by PikaPods, tailored to enhance your management experience. Stay tuned for additional tutorials and guides on these apps.
+Discover a range of [finance-related apps](https://www.pikapods.com/apps#finance) offered by PikaPods, tailored to enhance your management experience.

@@ -16,4 +16,4 @@ Discover Monica, a personal CRM app designed to help you manage relationships ef
 
 ## Explore Other Productivity-Related Apps
 
-Discover a plethora of [productivity-related apps](https://www.pikapods.com/apps#productivity) offered by PikaPods that can further elevate your efficiency, time management, and project coordination. Stay tuned for more tutorials and guides on these apps.
+Discover a plethora of [productivity-related apps](https://www.pikapods.com/apps#productivity) offered by PikaPods that can further elevate your efficiency, time management, and project coordination.

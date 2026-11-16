@@ -1,35 +1,36 @@
 ---
-title: Tutorials
-description: Our tutorials showcase what you can do with the many open source apps we offer. Includes many categories, like documentation, email, finance or monitoring.
+title: App Tutorials
+description: Step-by-step introductions to popular open source apps on PikaPods, like Immich, PhotoPrism, Actual Budget, BookStack and Uptime Kuma.
 sidebar:
-  label: Overview
-  order: 0
+  label: All Tutorials
 ---
 
-The open source apps PikaPods offers can be used in a large variety of business and personal settings. Our tutorials section makes it easy to find the right app for a task.
+Step-by-step introductions to some of the apps you can run on PikaPods. Most include short videos. For setup tips and fixes for a specific app, see [App Help](/apps).
 
-Tutorials are organized by category, helping you discover suitable apps and learn how to use them effectively for common tasks.
+## Photos
 
-## Documentation
-
-Explore tutorials on using documentation apps to create, organize, and manage information seamlessly. [More…](/tutorials/documentation)
-
-## Email
-
-The email category covers various email-related apps that can help you streamline your communication and marketing efforts. [More…](/tutorials/email)
+- [Immich Basics](/tutorials/photo/immich-1-basics): Back up, browse and share photos and videos with a Google Photos alternative.
+- [PhotoPrism Basics](/tutorials/photo/photoprism-1-basics): Upload photos, create albums and share them.
 
 ## Finance
 
-The finance category features apps designed to assist you in managing your finances effectively. [More…](/tutorials/finance)
+- [Actual Budget Basics](/tutorials/finance/actual-1-basics): Set up accounts, import transactions and track your spending.
+
+## Documentation
+
+- [BookStack Basics](/tutorials/documentation/bookstack-1-basics): Organize notes and documentation in books, chapters, pages and shelves.
+
+## Email
+
+- [Listmonk Basics](/tutorials/email/listmonk-1-basics): Set up mailing lists and send your first campaign.
 
 ## Monitoring
 
-A variety of apps to help you track and monitor system performance and availability. These apps can be used to monitor websites, servers, applications, and other IT infrastructure. [More…](/tutorials/monitoring)
-
-## Photo
-
-The photo category includes all apps used to organize, edit, or share photos. [More…](/tutorials/photo)
+- [Changedetection Basics](/tutorials/monitoring/changedetection-1-basics): Watch websites for changes and get notified.
+- [Setting Up Uptime Kuma](/tutorials/monitoring/uptime-kuma-1-setup): Monitor websites and servers and publish a status page.
 
 ## Productivity
 
-Boost your efficiency and productivity with apps designed to streamline tasks, manage projects, and optimize your workflow. Explore apps to simplify your work processes and achieve more in less time. [More…](/tutorials/productivity)
+- [Monica Basics](/tutorials/productivity/monica-1-basics): Keep track of contacts, relationships and conversations.
+
+Looking for an app for a specific job? Browse [all available apps](https://www.pikapods.com/apps).

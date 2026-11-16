@@ -1,0 +1,47 @@
+---
+title: PikaPods Help Center
+description: Guides and answers for running your apps on PikaPods. Learn how to set up a domain, back up your data, fix common problems and get help with specific apps.
+template: splash
+sidebar:
+  label: Home
+hero:
+  title: How can we help?
+  tagline: Guides and answers for running your apps on PikaPods. Use the search above or pick a topic below.
+  actions:
+    - text: Getting Started
+      link: /manage/getting-started
+      icon: right-arrow
+    - text: Contact Support
+      link: mailto:hello@pikapods.com
+      icon: email
+      variant: minimal
+---
+
+import { CardGrid, LinkCard } from '@astrojs/starlight/components';
+
+## Manage your pods
+
+<CardGrid>
+	<LinkCard title="Get started" description="Create an account and run your first app." href="/manage/getting-started" />
+	<LinkCard title="Use your own domain" description="Make a pod available under your own domain name." href="/manage/custom-domains" />
+	<LinkCard title="Back up your data" description="Set up automatic backups to storage you control." href="/manage/backup" />
+	<LinkCard title="Access your files" description="Upload and download a pod's files." href="/manage/files" />
+	<LinkCard title="Fix a pod that won't start" description="Check logs and resolve common errors." href="/manage/debug" />
+	<LinkCard title="Restrict access" description="Only allow selected IP addresses to reach a pod." href="/manage/firewall" />
+</CardGrid>
+
+## Help with apps
+
+<CardGrid>
+	<LinkCard title="App help" description="Setup tips and fixes for Nextcloud, WordPress, Ghost, Immich and many more." href="/apps" />
+	<LinkCard title="App tutorials" description="Step-by-step introductions to popular apps." href="/tutorials" />
+</CardGrid>
+
+## Common questions
+
+<CardGrid>
+	<LinkCard title="Billing & account" description="Pricing, account limits, business use and closing your account." href="/faq/account" />
+	<LinkCard title="Apps & updates" description="App support, updates and requesting new apps." href="/faq/apps" />
+	<LinkCard title="Email & network" description="Sending email from apps, data centers and time zones." href="/faq/technical" />
+	<LinkCard title="Contact support" description="Can't find an answer? Email hello@pikapods.com." href="mailto:hello@pikapods.com" />
+</CardGrid>

@@ -1,6 +1,6 @@
-# PikaPods App Docs
+# PikaPods Help Center
 
-Has the content of [docs.pikapods.com](https://docs.pikapods.com). Feel free to open a pull request if you notice any mistake or would like to add something.
+Has the content of the PikaPods help site at [docs.pikapods.com](https://docs.pikapods.com). Feel free to open a pull request if you notice any mistake or would like to add something.
 
 ## Setup
 - Node.js 24 (pinned in `.node-version`; on Fedora: `dnf install nodejs24`)
@@ -13,6 +13,10 @@ Has the content of [docs.pikapods.com](https://docs.pikapods.com). Feel free to 
 - Preview the build: `pnpm preview`
 
 Pages live in `src/content/docs/`. Sidebar structure is set in `astro.config.mjs`, ordering per page via `sidebar.order` front matter. Use `.mdx` only for pages that need components like `<Tabs>`.
+
+App help pages in `src/content/docs/apps/` are added to the sidebar automatically, but also need an entry in `apps/index.md`. New tutorials need an entry in the sidebar and in `tutorials/index.md`.
+
+Existing URLs are linked from the control panel and other sites, so change titles and labels rather than file paths.
 
 Images and videos live in `public/`, mirroring the page path (e.g. `public/tutorials/photo/photoprism-1-basics/`). Always reference them with absolute paths, since pages are served without a trailing slash.
 

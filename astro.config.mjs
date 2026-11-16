@@ -3,21 +3,15 @@ import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 import starlightLinksValidator from 'starlight-links-validator';
 
-// Tutorials are folders (page + media), which autogenerate would turn into nested groups.
-const tutorialCategory = (label, dir, tutorials) => ({
-	label,
-	collapsed: true,
-	items: [`tutorials/${dir}`, ...tutorials.map((t) => `tutorials/${dir}/${t}`)],
-});
-
 export default defineConfig({
 	site: 'https://docs.pikapods.com',
 	// Emit apps/nextcloud.html instead of apps/nextcloud/index.html to keep the existing extensionless URLs on Cloudflare Pages.
 	build: { format: 'file' },
+	redirects: { '/faq': '/faq/account' },
 	integrations: [
 		starlight({
-			title: 'PikaPods Docs',
-			description: 'Notes on selected apps and PikaPods controls',
+			title: 'PikaPods Help',
+			description: 'Guides and answers for running your apps on PikaPods.',
 			logo: { src: './src/assets/logo.svg' },
 			favicon: '/favicon.png',
 			customCss: ['./src/styles/custom.css'],
@@ -34,14 +28,14 @@ export default defineConfig({
 					},
 				},
 			],
+			lastUpdated: true,
 			plugins: [starlightLinksValidator()],
 			sidebar: [
 				'index',
+				'manage/getting-started',
 				{
-					label: 'Pod Management',
+					label: 'Manage Your Pods',
 					items: [
-						'manage',
-						'manage/getting-started',
 						'manage/custom-domains',
 						'manage/files',
 						'manage/database',
@@ -51,27 +45,30 @@ export default defineConfig({
 					],
 				},
 				{
-					label: 'Tutorials',
-					collapsed: true,
-					items: [
-						'tutorials',
-						tutorialCategory('Documentation', 'documentation', ['bookstack-1-basics']),
-						tutorialCategory('Email', 'email', ['listmonk-1-basics']),
-						tutorialCategory('Finance', 'finance', ['actual-1-basics']),
-						tutorialCategory('Monitoring', 'monitoring', ['changedetection-1-basics', 'uptime-kuma-1-setup']),
-						tutorialCategory('Photo', 'photo', ['photoprism-1-basics', 'immich-1-basics']),
-						tutorialCategory('Productivity', 'productivity', ['monica-1-basics']),
-					],
-				},
-				{
-					label: 'App Notes',
+					label: 'App Help',
 					collapsed: true,
 					items: [{ autogenerate: { directory: 'apps' } }],
 				},
 				{
-					label: 'FAQ',
-					items: ['faq', 'faq/account', 'faq/apps', 'faq/technical'],
+					label: 'App Tutorials',
+					collapsed: true,
+					items: [
+						'tutorials',
+						'tutorials/finance/actual-1-basics',
+						'tutorials/documentation/bookstack-1-basics',
+						'tutorials/monitoring/changedetection-1-basics',
+						'tutorials/photo/immich-1-basics',
+						'tutorials/email/listmonk-1-basics',
+						'tutorials/productivity/monica-1-basics',
+						'tutorials/photo/photoprism-1-basics',
+						'tutorials/monitoring/uptime-kuma-1-setup',
+					],
 				},
+				{
+					label: 'FAQ',
+					items: ['faq/account', 'faq/apps', 'faq/technical'],
+				},
+				{ label: 'Contact Support', link: 'mailto:hello@pikapods.com' },
 			],
 		}),
 	],

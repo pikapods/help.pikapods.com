@@ -22,4 +22,4 @@ Dive into Uptime Kuma for easy website and server checks. This quick guide cover
 
 ## Other Monitoring-Related Apps
 
-Explore a variety of [monitoring-related apps](https://www.pikapods.com/apps#monitoring) offered by PikaPods that can further enhance your website, servers and other monitoring tasks. Stay tuned for upcoming tutorials and guides on these apps.
+Explore a variety of [monitoring-related apps](https://www.pikapods.com/apps#monitoring) offered by PikaPods that can further enhance your website, servers and other monitoring tasks.
