@@ -4,7 +4,7 @@ import starlight from '@astrojs/starlight';
 import starlightLinksValidator from 'starlight-links-validator';
 
 export default defineConfig({
-	site: 'https://docs.pikapods.com',
+	site: 'https://help.pikapods.com',
 	// Emit apps/nextcloud.html instead of apps/nextcloud/index.html to keep the existing extensionless URLs on Cloudflare Pages.
 	build: { format: 'file' },
 	redirects: { '/faq': '/faq/account' },

@@ -35,7 +35,7 @@ Before we start, make sure you're logged into PikaPods. Not a member yet? Signin
   - **Ping**: Use this to simply verify if your website is accessible. Enter the website's hostname or IP address.
   - **Keyword**: This checks for specific words in your website's content to confirm it's displaying correctly.
 - **Name Your Monitor** (e.g., "PikaPods Documentation").
-- **Add URL**: Enter the URL or hostname you wish to keep an eye on. For keyword monitoring, typically, you'd input a website link, such as "https://docs.pikapods.com".
+- **Add URL**: Enter the URL or hostname you wish to keep an eye on. For keyword monitoring, typically, you'd input a website link, such as "https://help.pikapods.com".
 - Confirm and save the settings for your new monitor.
 
 ![](/tutorials/monitoring/uptime-kuma-1-setup/3-setup-monitor.jpg)

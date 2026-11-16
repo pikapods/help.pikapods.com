@@ -1,6 +1,6 @@
 # PikaPods Help Center
 
-Has the content of the PikaPods help site at [docs.pikapods.com](https://docs.pikapods.com). Feel free to open a pull request if you notice any mistake or would like to add something.
+Has the content of the PikaPods help site at [help.pikapods.com](https://help.pikapods.com). Feel free to open a pull request if you notice any mistake or would like to add something.
 
 ## Setup
 - Node.js 24 (pinned in `.node-version`; on Fedora: `dnf install nodejs24`)

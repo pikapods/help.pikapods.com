@@ -5,8 +5,8 @@ template: splash
 sidebar:
   label: Home
 hero:
-  title: How can we help?
-  tagline: Guides and answers for running your apps on PikaPods. Use the search above or pick a topic below.
+  title: PikaPods Help
+  tagline: Reference and how-to guides for deploying, configuring and troubleshooting your pods. New to PikaPods? Start with the basics.
   actions:
     - text: Getting Started
       link: /manage/getting-started
@@ -22,12 +22,12 @@ import { CardGrid, LinkCard } from '@astrojs/starlight/components';
 ## Manage your pods
 
 <CardGrid>
-	<LinkCard title="Get started" description="Create an account and run your first app." href="/manage/getting-started" />
-	<LinkCard title="Use your own domain" description="Make a pod available under your own domain name." href="/manage/custom-domains" />
-	<LinkCard title="Back up your data" description="Set up automatic backups to storage you control." href="/manage/backup" />
-	<LinkCard title="Access your files" description="Upload and download a pod's files." href="/manage/files" />
-	<LinkCard title="Fix a pod that won't start" description="Check logs and resolve common errors." href="/manage/debug" />
-	<LinkCard title="Restrict access" description="Only allow selected IP addresses to reach a pod." href="/manage/firewall" />
+	<LinkCard title="Custom domains" description="Serve a pod under your own domain name." href="/manage/custom-domains" />
+	<LinkCard title="File access (SFTP)" description="Upload and download a pod's files." href="/manage/files" />
+	<LinkCard title="Database access" description="Edit, import or export an app's database." href="/manage/database" />
+	<LinkCard title="Backups" description="Set up automatic backups to storage you control." href="/manage/backup" />
+	<LinkCard title="Troubleshooting" description="Check logs and fix a pod that won't start." href="/manage/debug" />
+	<LinkCard title="Firewall" description="Restrict a pod to selected IP addresses." href="/manage/firewall" />
 </CardGrid>
 
 ## Help with apps
