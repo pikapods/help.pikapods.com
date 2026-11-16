@@ -2,6 +2,8 @@
 title: PhotoPrism
 ---
 
+PhotoPrism is an AI-powered, self-hosted photo management app for browsing, organizing, and sharing your library. This help page addresses common scenarios for users who have [deployed PhotoPrism on PikaPods](https://www.pikapods.com/apps/photoprism). Refer to the [official PhotoPrism docs](https://docs.photoprism.app/) for complete documentation.
+
 ## Sync from Mobile Apps
 
 The official PhotoPrism site already has a [guide](https://docs.photoprism.app/user-guide/sync/mobile-devices/) on how to sync with different mobile apps. For PikaPods specifically, the settings are as follows for WebDAV-based sync:

@@ -2,6 +2,8 @@
 title: PocketBase
 ---
 
+PocketBase is an open-source backend in a single file, with a realtime database, authentication, file storage, and an admin dashboard. Once you have [deployed PocketBase on PikaPods](https://www.pikapods.com/apps/pocketbase), here are a few common scenarios you might face. Anything else is covered in the [official PocketBase docs](https://pocketbase.io/docs/).
+
 ## First-time Admin Setup
 
 Starting with PocketBase version 0.23.x, the initial admin setup process has changed. To create your first superuser account, follow these steps:

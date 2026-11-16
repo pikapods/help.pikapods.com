@@ -2,6 +2,8 @@
 title: Activepieces
 ---
 
+Activepieces is an open-source, self-hosted workflow automation tool with a visual builder and a large library of integrations. Once you have [deployed Activepieces on PikaPods](https://www.pikapods.com/apps/activepieces), here are a few common scenarios you might face. Full documentation is in the [official Activepieces docs](https://www.activepieces.com/docs).
+
 ## Known Session Issue
 
 Users may encounter a **401 Unauthorized** error when trying to access the Activepieces pod. This error often indicates that the session token has expired, preventing users from logging in or accessing certain features.

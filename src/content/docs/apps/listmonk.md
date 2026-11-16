@@ -2,6 +2,8 @@
 title: Listmonk
 ---
 
+Listmonk is a self-hosted newsletter and mailing list manager with a fast, simple dashboard. This help page addresses common scenarios for users who have [deployed Listmonk on PikaPods](https://www.pikapods.com/apps/listmonk). Full documentation is in the [official Listmonk docs](https://listmonk.app/docs/).
+
 ## Customize System Templates
 
 System templates for emails and public pages can be customized via [SFTP](/manage/files) in the `static` folder. On older pods, this includes `email-templates` and `public` subfolders. Newer pods use built-in defaults and the `static` folder may be empty.

@@ -2,6 +2,7 @@
 title: Discourse
 ---
 
+
 ## Installing Extensions
 
 You can enable, disable and manage extension settings in the admin interface under _Admin > Plugins_.

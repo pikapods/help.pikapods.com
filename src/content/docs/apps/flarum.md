@@ -2,6 +2,8 @@
 title: Flarum
 ---
 
+Flarum is a modern, extensible forum software with a clean, fast interface. Here are a few tips and fixes for [Flarum](https://www.pikapods.com/apps/flarum) pods hosted on PikaPods. For anything not covered here, see the [official Flarum docs](https://docs.flarum.org/).
+
 ## Installing Extensions
 
 You can manage extensions using the [Extension Manager](https://github.com/flarum/extension-manager) extension, which comes pre-installed with all Flarum pods on *PikaPods*. Navigate to *Administration > Features > Extension Manager* in your Flarum pod to enable and use it.

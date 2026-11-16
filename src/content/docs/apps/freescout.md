@@ -2,6 +2,8 @@
 title: FreeScout
 ---
 
+FreeScout is a self-hosted help desk and shared mailbox, an open-source alternative to Help Scout. Once you have [deployed FreeScout on PikaPods](https://www.pikapods.com/apps/freescout), here are a few common scenarios you might face. Refer to the [official FreeScout docs](https://github.com/freescout-help-desk/freescout/wiki) for complete documentation.
+
 ## Reset Password
 
 If you forgot your password and don't have the email feature set up, you can reset the password via the database. Steps:

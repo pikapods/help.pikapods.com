@@ -2,6 +2,8 @@
 title: Gokapi
 ---
 
+Gokapi is a lightweight self-hosted file sharing server with expiring download links. Once you have [deployed Gokapi on PikaPods](https://www.pikapods.com/apps/gokapi), here are a few common scenarios you might face. The [official Gokapi docs](https://gokapi.readthedocs.io/) cover the full feature set.
+
 ## SSL Configuration Issue
 
 Users may encounter an error stating "Client sent an HTTP request to an HTTPS server" when trying to access the Gokapi pod after initial setup. This issue arises from an SSL configuration conflict.

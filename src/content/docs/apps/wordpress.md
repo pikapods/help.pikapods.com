@@ -2,6 +2,8 @@
 title: WordPress
 ---
 
+WordPress is the world’s most popular open-source platform for building websites and blogs. This help page addresses common scenarios for users who have [deployed WordPress on PikaPods](https://www.pikapods.com/apps/wordpress). For anything not covered here, see the [official WordPress docs](https://wordpress.org/documentation/).
+
 ## Change Domain
 
 If you plan on using a custom domain or restoring an existing site, it's best to set the custom domain _before_ completing the WordPress installation assistant.

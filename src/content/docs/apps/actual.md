@@ -2,6 +2,8 @@
 title: Actual Budget
 ---
 
+Actual Budget is a local-first, open-source personal finance app for envelope-style budgeting, with optional sync across devices. Running [Actual Budget on PikaPods](https://www.pikapods.com/apps/actual)? These notes cover a few things worth knowing. For anything not covered here, see the [official Actual Budget docs](https://actualbudget.org/docs/).
+
 ## OIDC Authentication with Custom Domains
 
 When setting up OpenID Connect (OIDC) authentication with a [custom domain](/manage/custom-domains) in Actual Budget, follow these steps to ensure proper functionality:

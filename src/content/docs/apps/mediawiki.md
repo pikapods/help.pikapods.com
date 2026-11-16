@@ -2,6 +2,8 @@
 title: MediaWiki
 ---
 
+MediaWiki is the wiki software that powers Wikipedia, suited for building large, collaborative knowledge bases. Running [MediaWiki on PikaPods](https://www.pikapods.com/apps/mediawiki)? These notes cover a few things worth knowing. The [official MediaWiki docs](https://www.mediawiki.org/wiki/Documentation) cover the full feature set.
+
 ## Adjust Settings
 
 Some settings can only be changed in a file called `LocalSettings.php`. You can edit this file for your pod using [SFTP](/manage/files). This file is already populated with some common settings, like database settings. You shouldn't change those, but you can change most other settings. See [here](https://www.mediawiki.org/wiki/Manual:LocalSettings.php#Standard_settings) for a full reference.
