@@ -62,3 +62,5 @@ Life events let you log what happens in the life of your contacts for future ref
 4. Add details such as 'date', 'story', 'names', etc.
 5. Mark **Add yearly reminder** if you want to be reminded of a certain event.
 6. Click **Add** to finish the process.
+
+For setup tips and fixes, see [Monica App Help](/apps/monica).

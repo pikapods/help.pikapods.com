@@ -1,8 +1,11 @@
 ---
 title: Actual Budget
+description: "Tips and fixes for running Actual Budget on PikaPods: setting up OIDC sign-in with a custom domain."
 ---
 
 Actual Budget is a local-first, open-source personal finance app for envelope-style budgeting, with optional sync across devices. Running [Actual Budget on PikaPods](https://www.pikapods.com/apps/actual)? These notes cover a few things worth knowing. For anything not covered here, see the [official Actual Budget docs](https://actualbudget.org/docs/).
+
+New to Actual Budget? Start with our [Actual Budget tutorial](/tutorials/finance/actual-1-basics).
 
 ## OIDC Authentication with Custom Domains
 

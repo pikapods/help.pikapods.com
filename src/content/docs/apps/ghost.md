@@ -1,12 +1,13 @@
 ---
 title: Ghost
+description: "Tips and fixes for running Ghost on PikaPods: sending emails, themes, storage, analytics and resetting the admin password."
 ---
 
 Ghost is an open-source publishing platform for blogs, memberships, and paid newsletters. Here are a few tips and fixes for [Ghost](https://www.pikapods.com/apps/ghost) pods hosted on PikaPods. Full documentation is in the [official Ghost docs](https://ghost.org/docs/).
 
-## Sending email
+## Sending emails
 
-A working email configuration is required to send newsletters and account emails for new users. There are two kinds of emails and corresponding settings:
+A working email configuration is required to send newsletters and account emails for new users. See our [email FAQ](/faq/technical#sending-emails) for general background. There are two kinds of emails and corresponding settings:
 
 ### Bulk emails
 
@@ -108,7 +109,7 @@ If you wish to keep 2FA enabled, you must set up [Transactional emails](#transac
 
 For more information about Ghost's 2FA feature, see the [official changelog](https://ghost.org/changelog/2fa/).
 
-## Resetting the admin password
+## Reset Password
 
 If you can't log in and password reset emails aren't working, you can reset your Ghost admin password directly in the pod's database:
 

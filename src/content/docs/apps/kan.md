@@ -1,5 +1,6 @@
 ---
 title: Kan
+description: "Tips and fixes for running Kan on PikaPods: setting up S3 storage for attachments and avatars."
 ---
 
 Kan is an open-source, Trello-style kanban board for planning and tracking work with your team. Here are a few tips and fixes for [Kan](https://www.pikapods.com/apps/kan) pods hosted on PikaPods. Anything else is covered in the [official Kan docs](https://docs.kan.bn/).

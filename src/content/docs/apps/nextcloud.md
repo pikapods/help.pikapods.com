@@ -1,5 +1,6 @@
 ---
 title: Nextcloud
+description: "Tips and fixes for running Nextcloud on PikaPods: update notifications, debugging errors, PHP settings and maintenance mode."
 ---
 
 Nextcloud is a self-hosted collaboration platform for files, calendars, contacts, and more. Running [Nextcloud on PikaPods](https://www.pikapods.com/apps/nextcloud)? These notes cover a few things worth knowing. For anything not covered here, see the [official Nextcloud docs](https://docs.nextcloud.com/).

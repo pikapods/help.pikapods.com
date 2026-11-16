@@ -1,5 +1,6 @@
 ---
 title: Flarum
+description: "Tips and fixes for running Flarum on PikaPods: installing extensions, sending emails and changing the admin user."
 ---
 
 Flarum is a modern, extensible forum software with a clean, fast interface. Here are a few tips and fixes for [Flarum](https://www.pikapods.com/apps/flarum) pods hosted on PikaPods. For anything not covered here, see the [official Flarum docs](https://docs.flarum.org/).
@@ -11,9 +12,9 @@ You can manage extensions using the [Extension Manager](https://github.com/flaru
 To persist extensions during pod updates and edits, you also need to add the `vendor/package-name` in the file `/data/extensions/list`. This file can be accessed via [SFTP](/manage/files#accessing-pod-files-using-sftp). Be sure to have a new line at the end of the file. (We are [working](https://github.com/crazy-max/docker-flarum/issues/103) to get rid of this step.)
 
 
-## Send email with SMTP
+## Sending emails
 
-First, log in to the Flarum forum as an administrator and then follow these steps:
+You need the SMTP details of an email provider, as described in our [email FAQ](/faq/technical#sending-emails). Then log in to the Flarum forum as an administrator and follow these steps:
 
 1. Go to **Administration > Email**.
 2. Under **Choose a Driver**, select **SMTP**.
@@ -32,7 +33,7 @@ Once you have completed these steps, Flarum will be able to send its verificatio
 
 ## Changing initial admin user
 
-You MUST set up [email with SMTP](#send-email-with-smtp) before editing the initial admin user.
+You MUST set up [email with SMTP](#sending-emails) before editing the initial admin user.
 
 **Step 1: Change username**
 

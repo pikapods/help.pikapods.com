@@ -7,6 +7,14 @@ sidebar:
 
 The Firewall feature allows you to restrict access to your pod by creating an allowlist of IP addresses. This effectively blocks all connections from IPs not listed in the Firewall tab before they reach your pod.
 
+## Enabling the Firewall
+
+1. Open _Pod Settings_ and then the _Firewall_ tab.
+2. Add the IP addresses that should be able to reach your pod. You can look up your own [external IP](https://whatismyipaddress.com/).
+3. From now on, only the listed IPs can connect.
+
+## Access Issues
+
 :::caution
 External IPs can change. If you have access issues, confirm your [external IP](https://whatismyipaddress.com/) first.
 :::

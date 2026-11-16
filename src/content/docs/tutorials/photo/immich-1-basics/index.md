@@ -21,7 +21,7 @@ or computer, with features that are similar to Google Photos backup. In this tut
 a look at the main features of Immich and how you can run the application using PikaPods, a
 platform hosting a large selection of open source apps from $1 per month.
 
-### Part 1: Getting Started with Immich
+## Part 1: Getting Started with Immich
 
 So, you’ve decided to opt for a Google Photos alternative that is self-hosted, and you’ve found
 Immich! The next steps that you need to take to get started are super simple. The fastest way to
@@ -32,11 +32,11 @@ set-up involved. Here’s how:
 2. Search and run 'Immich'.
 3. Create a user account once the pod is up.
 
-### Part 2: Uploading Photos on Immich
+## Part 2: Uploading Photos on Immich
 
 Once you have set up your Immich account, you can upload your photos by selecting **Upload Photos** at the top right of your screen. You can then choose which photos you would like to upload, and select **open**. The selected photos will now appear in your Immich library.
 
-### Part 3: Browsing Photos and Videos on Immich
+## Part 3: Browsing Photos and Videos on Immich
 
 Browsing through your photos on Immich is simple. You can navigate this through the side-bar
 menu using different viewing options, including:
@@ -55,7 +55,7 @@ the image, copy the image, download, view information, add it as a favourite, or
 By clicking on the three dots, you will be able to view more options such as adding the photo to
 an album or archiving it.
 
-### Part 4: Further Browsing Options - Your Library
+## Part 4: Further Browsing Options - Your Library
 
 Apart from being able to browse through your photos using the viewing options mentioned in
 Part 3 of this tutorial, you can also segment your images into different albums. This will make it
@@ -69,7 +69,7 @@ the following sections:
   These can be created by choosing to group together images that are already uploaded,
   or by uploading new photos directly from your device.
 
-### Part 5: How to Create and Share an Album on Immich
+## Part 5: How to Create and Share an Album on Immich
 
 Once you’ve uploaded your photos and created a secure alternative to Google Photos backup
 for your images and videos, it’s time to organise your photos into albums. In this way, you’ll be
@@ -85,3 +85,5 @@ album! Here’s how you can create albums on Immich:
 6. Click on **Create Link** to generate a link that you can share with anyone.
 7. For additional security, you can add a password that others can use to access the link.
 8. Copy and paste the link to share!
+
+For setup tips and fixes, see [Immich App Help](/apps/immich).

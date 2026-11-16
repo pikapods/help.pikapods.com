@@ -62,3 +62,5 @@ There are many different notification services to choose from, including email a
 ![](/tutorials/monitoring/uptime-kuma-1-setup/5-setup-status-page.jpg)
 
 Now you can share the public URL of the status page and users without an account will be able to view it. You can also post updates on the status page using the Create Incident button when editing the status page.
+
+For setup tips and fixes, see [Uptime Kuma App Help](/apps/uptime-kuma).

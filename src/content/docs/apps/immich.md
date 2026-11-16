@@ -1,8 +1,11 @@
 ---
 title: Immich
+description: "Tips and fixes for running Immich on PikaPods: using external libraries."
 ---
 
 Immich is a high-performance, self-hosted photo and video backup solution with mobile apps and a web UI. Running [Immich on PikaPods](https://www.pikapods.com/apps/immich)? These notes cover a few things worth knowing. Refer to the [official Immich docs](https://immich.app/docs) for complete documentation.
+
+New to Immich? Start with our [Immich tutorial](/tutorials/photo/immich-1-basics).
 
 ## Using external libraries
 

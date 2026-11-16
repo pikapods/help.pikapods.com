@@ -1,5 +1,6 @@
 ---
 title: RSSHub
+description: "Tips and fixes for running RSSHub on PikaPods: adding additional configuration."
 ---
 
 RSSHub is an open-source tool that generates RSS feeds for websites that don’t offer them. Running [RSSHub on PikaPods](https://www.pikapods.com/apps/rsshub)? These notes cover a few things worth knowing. Full documentation is in the [official RSSHub docs](https://docs.rsshub.app/).

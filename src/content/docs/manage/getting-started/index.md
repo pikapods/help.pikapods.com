@@ -27,7 +27,7 @@ Creating an account on PikaPods is simple and doesn't require credit card inform
 <video controls loop muted preload="none" src="/manage/getting-started/2-find-deploy-apps.mp4" poster="/manage/getting-started/2-find-deploy-apps.webp">
 </video>
 
-Once your account is set up, you can start exploring the library of available open-source apps. With **over 60 apps** to choose from, you'll find a brief description of each app to help you make your selection. Here's how to deploy an app using PikaPods:
+Once your account is set up, you can start exploring the library of available open-source apps. Each app comes with a brief description to help you make your selection. Here's how to deploy an app using PikaPods:
 
 1. Browse the available apps by clicking on **Available Apps** in the upper menu.
 2. When you find the app you want, click on **Run Your Own**.
@@ -45,3 +45,10 @@ You can always customize the settings for each app in your pod's library. Keep i
 1. Click on the **settings icon** located under the app you want to configure.
 2. You can now edit the name, compute resources, set a [custom domain](/manage/custom-domains), enable [SFTP](/manage/files), and enable [database](/manage/database) access.
 3. Click **Save** to save your settings.
+
+## Next Steps
+
+- [Use your own domain](/manage/custom-domains) to make a pod available under your own name.
+- [Set up backups](/manage/backup) if the data in your pod is important to you.
+- Check [App Help](/apps) for setup tips and fixes for your app.
+- Have a question about pricing or updates? See the FAQ on [billing](/faq/account) and [apps](/faq/apps).

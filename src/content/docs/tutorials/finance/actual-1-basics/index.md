@@ -91,3 +91,5 @@ You can also manually add transactions, specifying the date for each transaction
 3. Enter the **payee** name.
 4. Depending on inflow/outflow, choose the appropriate **debit/credit column**.
 5. Specify the transaction **amount**.
+
+For setup tips and fixes, see [Actual Budget App Help](/apps/actual).

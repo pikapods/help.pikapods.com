@@ -63,3 +63,5 @@ Here are the steps:
 7. Optionally, add **tags** for categorization.
 8. Optionally, provide a **description** for the list.
 9. Click ‘**save**’.
+
+For setup tips and fixes, see [Listmonk App Help](/apps/listmonk).

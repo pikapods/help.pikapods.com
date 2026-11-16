@@ -1,5 +1,6 @@
 ---
 title: Umami
+description: "Tips and fixes for running Umami on PikaPods: missing analytics after updates and clearing old data."
 ---
 
 Umami is a simple, privacy-focused web analytics tool and an alternative to Google Analytics. Running [Umami on PikaPods](https://www.pikapods.com/apps/umami)? These notes cover a few things worth knowing. Anything else is covered in the [official Umami docs](https://umami.is/docs).

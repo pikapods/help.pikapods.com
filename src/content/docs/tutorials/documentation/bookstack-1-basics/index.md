@@ -63,3 +63,5 @@ Shelves help you organize and categorize your books or documents. They are usefu
 5. Optionally, add a **cover image** that represents the shelf.
 6. Include **tags** for easy navigation (optional).
 7. Click **save shelf** at the bottom of the screen.
+
+For setup tips and fixes, see [BookStack App Help](/apps/bookstack).

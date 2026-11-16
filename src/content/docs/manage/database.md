@@ -1,8 +1,8 @@
 ---
-title: Managing Databases
+title: Database Access
 description: Databases are like the brain of an app. While it's not usually needed, at PikaPods you always have the option to edit, import or export the app's database directly.
 sidebar:
-  label: Database
+  label: Database Access
   order: 3
 ---
 
@@ -16,7 +16,7 @@ Advanced users can directly access the database of certain apps to make small ed
 
 1. Navigate to **Pod Settings > Database**.
 2. You will find an "Enable Database Access" switch. Toggle it to enable or disable database access, depending on your needs.
-3. Enabling it will display a login link and a password.
+3. Enabling it will display a login link and a password. The link opens Adminer, a web-based tool to browse and edit the database.
 
 > This feature may not be available for all apps. Some apps use SQLite databases, which can be accessed using [SFTP](/manage/files#accessing-pod-files-using-sftp) to retrieve the database file.
 
@@ -30,4 +30,4 @@ For MongoDB apps like Rocket Chat in PikaPods, each pod has an individual MongoD
 
 ## Import and Export the Pod's Database
 
-After enabling database access, you can use Adminer's import and export features to replace the whole database, if needed. Be sure the pod is stopped when doing this.
+After enabling database access, you can use the import and export features of Adminer to replace the whole database, if needed. Be sure the pod is stopped when doing this.

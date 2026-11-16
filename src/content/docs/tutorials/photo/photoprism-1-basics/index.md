@@ -74,3 +74,5 @@ Learn how to share your albums with ease using PhotoPrism. You can even set expi
 3. Use the **purple icon** from the options.
 4. Edit the **shareable link** options in the pop-up.
 5. Copy the **shareable link** to the clipboard.
+
+For setup tips and fixes, see [PhotoPrism App Help](/apps/photoprism).

@@ -1,5 +1,6 @@
 ---
 title: WordPress
+description: "Tips and fixes for running WordPress on PikaPods: changing the domain, PHP and WordPress settings, resetting your password and email."
 ---
 
 WordPress is the world’s most popular open-source platform for building websites and blogs. This help page addresses common scenarios for users who have [deployed WordPress on PikaPods](https://www.pikapods.com/apps/wordpress). For anything not covered here, see the [official WordPress docs](https://wordpress.org/documentation/).
@@ -29,7 +30,7 @@ You can reset your password using the database. Steps are like this:
 1. Enable the pod's [database access](/manage/database) feature
 2. Follow the [official WordPress docs](https://wordpress.org/documentation/article/reset-your-password/#through-phpmyadmin) to do the actual reset. Look for the `wp_users` table and then change the `user_pass` field of the user.
 
-## Email Configuration
+## Sending emails
 
 To enable WordPress email functionality for user registration, password reset, and notifications, you'll need to configure an external SMTP service. While this can be configured manually using the `WORDPRESS_CONFIG_EXTRA` environment variable, we recommend using one of these well-maintained SMTP plugins for easier setup:
 

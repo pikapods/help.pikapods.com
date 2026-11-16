@@ -1,5 +1,6 @@
 ---
 title: SilverBullet
+description: "Tips and fixes for running SilverBullet on PikaPods: login credentials."
 ---
 
 SilverBullet is a self-hosted, programmable note-taking app built on Markdown. This help page addresses common scenarios for users who have [deployed SilverBullet on PikaPods](https://www.pikapods.com/apps/silverbullet). The [official SilverBullet docs](https://silverbullet.md/) cover the full feature set.

@@ -1,5 +1,6 @@
 ---
 title: Ntfy
+description: "Tips and fixes for running Ntfy on PikaPods: setting up users, sending notifications, locking down access and mobile apps."
 ---
 
 [ntfy](https://ntfy.sh/) is a simple HTTP-based pub-sub notification service: publish a message to a *topic* with one HTTP request and receive it on your phone, desktop, or the web app. Here are a few tips and fixes for [ntfy](https://www.pikapods.com/apps/ntfy) pods hosted on PikaPods. The [official ntfy docs](https://docs.ntfy.sh/) cover the full feature set.

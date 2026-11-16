@@ -1,8 +1,11 @@
 ---
 title: PhotoPrism
+description: "Tips and fixes for running PhotoPrism on PikaPods: syncing from mobile apps, importing via WebDAV and upload size."
 ---
 
 PhotoPrism is an AI-powered, self-hosted photo management app for browsing, organizing, and sharing your library. This help page addresses common scenarios for users who have [deployed PhotoPrism on PikaPods](https://www.pikapods.com/apps/photoprism). Refer to the [official PhotoPrism docs](https://docs.photoprism.app/) for complete documentation.
+
+New to PhotoPrism? Start with our [PhotoPrism tutorial](/tutorials/photo/photoprism-1-basics).
 
 ## Sync from Mobile Apps
 

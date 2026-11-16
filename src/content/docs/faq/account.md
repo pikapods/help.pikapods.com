@@ -19,7 +19,7 @@ Stopped pods will also stay stopped for upgrades. For some apps this can break m
 We regularly adjust pricing for new pods to better reflect the current price of compute resources. For existing pods, see *Price Adjustments* below.
 
 
-## Minimum Resource Requirements
+## Minimum resource requirements
 Some apps have minimum resource requirements that are optimized to cover a majority of typical use cases. You can always allocate additional resources, if your pod is slow or low on memory.
 
 When adding new apps, we set minimum resource requirements based on several factors:
@@ -33,7 +33,7 @@ While some apps may work with lower specs initially, they might not provide the 
 If your pod runs out of memory multiple times, we will notify you and automatically increase memory to make sure it's stable.
 
 
-## Price Adjustments
+## Price adjustments
 
 From time to time we adjust our pricing to reflect current market conditions, such as changes in the cost of compute and storage hardware. This happens infrequently, usually at most once a year.
 
@@ -48,7 +48,7 @@ Editing a pod's resources does not change its pricing. You can scale an existing
 You can see which pricing version a pod uses next to its estimated monthly cost when editing its resources.
 
 
-## Account Limits
+## Account limits
 To ensure system stability, every account is subject to limits on the amount of CPU cores, memory and disk storage it can use. You can view these limits in the control panel under *Account > Account Limits*. To avoid abuse, new accounts start with lower limits. After you make the first top-up to your account, your limits will increase to 10 pods and 2 TB of storage. If you need more than that, please just send an email to [hello@pikapods.com](mailto:hello@pikapods.com).
 
 
@@ -56,15 +56,14 @@ To ensure system stability, every account is subject to limits on the amount of 
 Can you use *PikaPods* for your business apps? The answer is yes! Many of our users already run business-critical apps on our platform. We are also hoping to add more features in the future to serve this segment better. Here's what you can expect in terms of uptime, support, and data safety:
 
 - **Uptime and maintenance**: Historically, you can expect an uptime of about 99.95% over a month or better, which translates to about 30 minutes of downtime in a month. This is needed to apply regular app updates, as well as system updates. App updates happen about twice a month and take only a few seconds. System updates need a reboot and last about 15 minutes. They will be scheduled at off-peak hours in their region and happen every 3 to 6 months. It can take up to 30 minutes for all pods to be back up, since they are started back up in random sequence. (These numbers are historical averages and don't constitute any uptime guarantee or service level agreement.)
-- **Support Response Time**: Our support staff works in Asian and EU time zones and you can expect a response in less than an hour during normal business hours.
-- **Backups**: We take whole-server offsite backups daily and every server has redundant drives. These protect against server-wide failures and aren't a per-pod restore service — if your data matters, set up your own [pod backups](/manage/backup).
+- **Support response time**: Our support staff works in Asian and EU time zones and you can generally expect a response within a few hours on working days.
+- **Backups**: We take whole-server offsite backups daily and every server has redundant drives. These protect against server-wide failures and aren't a per-pod restore service. If your data matters, set up your own [pod backups](/manage/backup) to S3 storage you control.
 - **Testing**: As opposed to doing automatic container updates, all our updates are tested before they reach your pod. This includes dealing with breaking changes and migrations over time.
 
 In the future, we plan on adding a "business" tier to better address the needs of users who rely on their pod for production needs. This would include:
 
 - Contractual service level agreement (SLA)
 - Guaranteed support response times
-- Per-pod backups/snapshots to e.g. AWS S3 buckets
 - Additional app testing
 - Monitoring of your apps
 - Live migration before reboots to minimize downtime
@@ -72,11 +71,11 @@ In the future, we plan on adding a "business" tier to better address the needs o
 If you already use *PikaPods* for your business apps and want an additional level of support from the same team, you can also look into [Peakford's managed server solutions](https://www.peakford.com/).
 
 
-## Delete your Account
+## Delete your account
 
 If you are not using your *PikaPods* account to run any pods, there is no cost associated with it, so you could just let it sit until you need it again. Any credit you have, including free welcome credit, won't expire and will still be there.
 
-In case you still want to fully remove the account, use those steps:
+In case you still want to fully remove the account, follow these steps:
 
 1. Remove all your pods first.
 2. Navigate to [Account > Profile > Remove Account](https://www.pikapods.com/account?tab=profile) to close the account.

@@ -24,11 +24,15 @@ Steps to use a custom domain:
 1. Open _Pod Settings_ and then the _Domain_ tab.
 2. Enable _Custom Domain_. Take note of your pod's `xxx-yyy.pikapod.net` subdomain
 3. Ensure no CAA records are set that may prevent us from applying for an SSL certificate. If you already use CAA, please also add `sectigo.com`, as mentioned [here](https://help.zerossl.com/hc/en-us/articles/360060119753-Invalid-CAA-Records), **and** `letsencrypt.org`, as mentioned [here](https://letsencrypt.org/docs/caa/).
-4. Then, depending on if you want to map a subdomain (e.g. `status.my-domain.com`) or root (apex) domain (e.g. `my-domain.com`):
+4. Add a DNS record with your domain provider. Which one depends on the kind of domain you want to use:
 
-   `CNAME` record for subdomains: `status.my-domain.com. 3600 IN CNAME xxx-yyy.pikapod.net`
+   - **Subdomain** (e.g. `status.my-domain.com`): add a `CNAME` record.
 
-   `ALIAS` record for root domains: `@ 3600 IN ALIAS xxx-yyy.pikapod.net`
+     `status.my-domain.com. 3600 IN CNAME xxx-yyy.pikapod.net`
+
+   - **Root (apex) domain** (e.g. `my-domain.com`): add an `ALIAS` record. Some providers call this `ANAME` or _CNAME flattening_ and not all of them support it. If yours doesn't, use a subdomain like `www` instead.
+
+     `@ 3600 IN ALIAS xxx-yyy.pikapod.net`
 
 5. Use a tool like [DNS Checker](https://dnschecker.org/) to ensure the record for your domain shows your `pikapod.net` domain or the same IP.
 6. Finally, add the new domain in the PikaPods control panel. If the setup is correct, it will be verified and saved.
@@ -53,7 +57,7 @@ If you want to restrict your pod to only receive traffic from Cloudflare and blo
 
 **Cloudflare SSL/TLS settings**: If you proxy your domain through Cloudflare (orange cloud), set _SSL/TLS → Overview → encryption mode_ to _Full (strict)_. Your pod automatically obtains a valid Let's Encrypt certificate, so Full (strict) — the most secure option — works out of the box. Do not use "Flexible" (it causes redirect loops and isn't encrypted to your pod), and don't leave the mode on "Automatic."
 
-**Web application firewall (WAF)**: If you use Cloudflare's proxy feature, it's possible that our monitoring will get blocked and we can no longer determine if your pod is available on its custom domain, and we can't renew the encryption certificate for your custom domain. In this case, please ensure you have an exception added for the path `/.well-known/*` in _Security > WAF_, as described above.
+**Web application firewall (WAF)**: If you use Cloudflare's proxy feature, it's possible that our monitoring will get blocked and we can no longer determine if your pod is available on its custom domain, and we can't renew the encryption certificate for your custom domain. In this case, please ensure you have an exception added for the path `/.well-known/*` in _Security > WAF_, as shown below.
 
 ![Cloudflare WAF Exception](/manage/cloudflare-waf.png)
 

@@ -1,5 +1,6 @@
 ---
 title: n8n
+description: "Tips and fixes for running n8n on PikaPods: resetting your password, pruning old executions and fixing high CPU usage."
 ---
 
 n8n is a fair-code workflow automation platform that connects apps and services with a visual editor. This help page addresses common scenarios for users who have [deployed n8n on PikaPods](https://www.pikapods.com/apps/n8n). Anything else is covered in the [official n8n docs](https://docs.n8n.io/).

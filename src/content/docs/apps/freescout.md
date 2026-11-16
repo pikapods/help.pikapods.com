@@ -1,5 +1,6 @@
 ---
 title: FreeScout
+description: "Tips and fixes for running FreeScout on PikaPods: resetting your password, clearing the cache, installing modules and migrating."
 ---
 
 FreeScout is a self-hosted help desk and shared mailbox, an open-source alternative to Help Scout. Once you have [deployed FreeScout on PikaPods](https://www.pikapods.com/apps/freescout), here are a few common scenarios you might face. Refer to the [official FreeScout docs](https://github.com/freescout-help-desk/freescout/wiki) for complete documentation.
@@ -49,7 +50,7 @@ For more detailed information, see the [official FreeScout cache clearing docume
 FreeScout modules can be installed on PikaPods without CLI access in most cases. Even if they aren't from the official marketplace, but from Github. Here's the process:
 
 * Download the module source from GitHub (Code > Download ZIP)
-* Enable SFTP access via Pod Settings > Files and connect using an SFTP client (see https://docs.pikapods.com/manage/files)
+* Enable SFTP access via Pod Settings > Files and connect using an SFTP client (see [Access Pod Files](/manage/files))
 * Upload the module folder to `/data/Modules/`
 * Clear the cache via Manage > System > Tools > Clear Cache in the FreeScout UI
 * Restart the pod via More > Restart Pod

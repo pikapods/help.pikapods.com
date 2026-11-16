@@ -1,5 +1,6 @@
 ---
 title: Gokapi
+description: "Tips and fixes for running Gokapi on PikaPods: SSL and domain configuration."
 ---
 
 Gokapi is a lightweight self-hosted file sharing server with expiring download links. Once you have [deployed Gokapi on PikaPods](https://www.pikapods.com/apps/gokapi), here are a few common scenarios you might face. The [official Gokapi docs](https://gokapi.readthedocs.io/) cover the full feature set.

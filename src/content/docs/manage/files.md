@@ -1,16 +1,16 @@
 ---
-title: Manage Pod Files
+title: Access Pod Files (SFTP)
 description: With PikaPods, all data is under your control. Here you learn how to directly access your files using SFTP.
 sidebar:
-  label: Files
+  label: Access Files (SFTP)
   order: 2
 ---
 
-Pods can also use permanent file stores, called *volumes*. Volumes live outside your pod and persist across updates and configuration changes. E.g. a photo app will usually keep the pictures you upload in such a volume. This has the benefit that you can easily upload or download those files.
+Most apps keep the files you add in permanent storage, called *volumes*. Volumes live outside your pod and persist across updates and configuration changes. E.g. a photo app will usually keep the pictures you upload in such a volume. This has the benefit that you can easily upload or download those files.
 
 ## Accessing Pod Files Using SFTP
 
-SFTP is a way to securely access remote files. It's similar to FTP, but uses encryption. To access your pod's files, first enable SFTP in the pod's settings on the **Pod Settings > SFTP** tab. This will display the hostname, username and password to use.
+SFTP is a way to securely transfer files between your computer and a server. It's similar to FTP, but uses encryption. To access your pod's files, first enable SFTP in the pod's settings on the **Pod Settings > SFTP** tab. This will display the hostname, username and password to use.
 
 Then use any SFTP client to connect to the displayed hostname. Some popular SFTP clients:
 
@@ -26,7 +26,7 @@ To connect to a pod, you need the following details, which will be displayed in 
 - Username: Usually something like `p9999`
 - Password: A randomly generated password
 
-The first time you may be prompted to verify the server signature. So you can be certain to connect to the correct server in the future. 
+The first time you connect, you may be prompted to verify the server signature. This lets you be certain you're connecting to the correct server in the future.
 
 Here are the keys we deploy. Those will be the same for all servers.
 

@@ -1,5 +1,6 @@
 ---
 title: Shlink
+description: "Tips and fixes for running Shlink on PikaPods: accessing the dashboard and generating an API key."
 ---
 
 Shlink is a self-hosted, open-source URL shortener. It consists of an API server and uses a separate web client for management. Here are a few tips and fixes for [Shlink](https://www.pikapods.com/apps/shlink) pods hosted on PikaPods. For anything not covered here, see the [official Shlink docs](https://shlink.io/documentation/).
