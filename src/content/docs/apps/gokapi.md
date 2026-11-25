@@ -27,10 +27,10 @@ To properly set up Gokapi on PikaPods and avoid SSL conflicts:
 
 If you've added a custom domain to your pod and Gokapi is still generating links with the old subdomain, you need to update the `ServerUrl` setting in the configuration file.
 
-1. Stop the pod.
+1. Pause the pod (*More > Pause Pod*).
 2. Access your pod files via SFTP. (Refer to [this page](/manage/files) for accessing pod files using SFTP.)
 3. Open `config/config.json`.
 4. Find the `ServerUrl` setting and update it to your new domain (e.g., `https://yourdomain.com`).
-5. Save the file and start the pod again.
+5. Save the file and resume the pod (*More > Resume Pod*).
 
 Gokapi stores the domain in a configuration file rather than environment variables, so when you change your pod domain, this setting needs to be updated manually.

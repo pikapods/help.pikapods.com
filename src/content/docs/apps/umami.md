@@ -1,13 +1,9 @@
 ---
 title: Umami
-description: "Tips and fixes for running Umami on PikaPods: missing analytics after updates and clearing old data."
+description: "Tips and fixes for running Umami on PikaPods: clearing old analytics data."
 ---
 
 Umami is a simple, privacy-focused web analytics tool and an alternative to Google Analytics. Running [Umami on PikaPods](https://www.pikapods.com/apps/umami)? These notes cover a few things worth knowing. Anything else is covered in the [official Umami docs](https://umami.is/docs).
-
-## No Analytics after Update
-
-After your pod was updated to version v1.39.4 on Nov 2, 2022, you may see a blank analytics page. This is due to authentication changes and can be resolved easily by logging out and back in again, as mentioned [here](https://github.com/umami-software/umami/issues/1598).
 
 ## Clear Old Analytics Data
 

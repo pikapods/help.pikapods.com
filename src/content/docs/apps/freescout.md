@@ -10,7 +10,7 @@ FreeScout is a self-hosted help desk and shared mailbox, an open-source alternat
 If you forgot your password and don't have the email feature set up, you can reset the password via the database. Steps:
 
 1. Enable [database access](/manage/database) for the pod.
-2. Log into the database from the _PikaPods_ control panel
+2. Log into the database from the PikaPods control panel
 3. Navigate to the _users_ table
 4. Ensure you see the _password_ field. It contains a `bcrypt`-encrypted password
 5. Generate a new `bcrypt` hash using your new password. E.g. on [this website](https://bcrypt-generator.com/).
@@ -34,7 +34,7 @@ This will ensure that any changes you make, such as modifying profile photo size
 
 If you've installed a broken module in FreeScout and need to remove it, you can clear the module cache by following these steps:
 
-1. Enable SFTP access to your FreeScout pod via _Pod Settings > Files_ and connect (see [Accessing Pod Files using SFTP](/manage/files#accessing-pod-files-using-sftp))
+1. Enable SFTP access to your FreeScout pod via *⚙️ Edit Pod Settings* > *Files* and connect (see [Accessing Pod Files using SFTP](/manage/files#accessing-pod-files-using-sftp))
 2. Remove the broken module from `data/Modules/` directory if it's still there
 3. Delete all files in these directories:
    - `data/storage/framework/cache/data/*`
@@ -47,13 +47,13 @@ For more detailed information, see the [official FreeScout cache clearing docume
 
 ## Installing Modules
 
-FreeScout modules can be installed on PikaPods without CLI access in most cases. Even if they aren't from the official marketplace, but from Github. Here's the process:
+FreeScout modules can be installed on PikaPods without CLI access in most cases. Even if they aren't from the official marketplace, but from GitHub. Here's the process:
 
 * Download the module source from GitHub (Code > Download ZIP)
-* Enable SFTP access via Pod Settings > Files and connect using an SFTP client (see [Access Pod Files](/manage/files))
+* Enable SFTP access via *⚙️ Edit Pod Settings* > *Files* and connect using an SFTP client (see [Access Pod Files](/manage/files))
 * Upload the module folder to `/data/Modules/`
 * Clear the cache via Manage > System > Tools > Clear Cache in the FreeScout UI
-* Restart the pod via More > Restart Pod
+* Restart the pod via *More > Restart*
 
 Do note that if a specific module requires running php artisan commands for database migrations, that is a limitation of our managed environment. We don't provide terminal/CLI access, and we're unable to run artisan commands on your behalf inside the container. Modules that only need file placement and cache clearing work fine, but modules requiring migration commands may not be compatible.
 
@@ -67,7 +67,7 @@ When migrating an existing FreeScout installation to PikaPods, follow these step
      - Export your database (create a SQL dump)
      - Backup your entire FreeScout directory (contains config files, modules, etc.)
      - For detailed backup instructions, see the [FreeScout backup documentation](https://github.com/freescout-help-desk/freescout/wiki/Backup)
-   - Create a new empty FreeScout pod in PikaPods and stop it before proceeding
+   - Create a new empty FreeScout pod in PikaPods and pause it (*More > Pause Pod*) before proceeding
 
 2. **Database Migration**
 
@@ -87,8 +87,8 @@ When migrating an existing FreeScout installation to PikaPods, follow these step
    - Copy folders from `/storage/app` to `/data/storage/app`
 
 4. **Post-Migration Steps**
-   - Start the pod and verify the login form appears
-   - If you encounter any issues, set `APP_DEBUG` to `true` in the pod's environment variables for detailed error messages
+   - Resume the pod (*More > Resume Pod*) and verify the login form appears
+   - If you encounter any issues, set `APP_DEBUG` to `true` in *⚙️ Edit Pod Settings* > *Env Vars* for detailed error messages
    - Update any necessary configuration settings to match your previous setup
    - Note: After migration, mail server connections will need to be reconfigured. For example, Microsoft 365 email fetching won't work until you establish a new connection. Follow the [Microsoft 365 OAuth setup guide](https://github.com/freescout-help-desk/freescout/wiki/Connect-FreeScout-to-Microsoft-365-Exchange-via-oAuth) and manage tokens via [Microsoft Entra](https://entra.microsoft.com). For other mail servers, refer to the [FreeScout mail server documentation](https://github.com/freescout-help-desk/freescout/wiki/Fetching-Emails).
 

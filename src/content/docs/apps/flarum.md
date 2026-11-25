@@ -7,12 +7,12 @@ Flarum is a modern, extensible forum software with a clean, fast interface. Here
 
 ## Installing Extensions
 
-You can manage extensions using the [Extension Manager](https://github.com/flarum/extension-manager) extension, which comes pre-installed with all Flarum pods on *PikaPods*. Navigate to *Administration > Features > Extension Manager* in your Flarum pod to enable and use it.
+You can manage extensions using the [Extension Manager](https://github.com/flarum/extension-manager) extension, which comes pre-installed with all Flarum pods on PikaPods. Navigate to *Administration > Features > Extension Manager* in your Flarum pod to enable and use it.
 
 To persist extensions during pod updates and edits, you also need to add the `vendor/package-name` in the file `/data/extensions/list`. This file can be accessed via [SFTP](/manage/files#accessing-pod-files-using-sftp). Be sure to have a new line at the end of the file. (We are [working](https://github.com/crazy-max/docker-flarum/issues/103) to get rid of this step.)
 
 
-## Sending emails
+## Sending Emails
 
 You need the SMTP details of an email provider, as described in our [email FAQ](/faq/technical#sending-emails). Then log in to the Flarum forum as an administrator and follow these steps:
 
@@ -29,9 +29,11 @@ You need the SMTP details of an email provider, as described in our [email FAQ](
 
 Once you have completed these steps, Flarum will be able to send its verification emails.
 
-> If you receive an error message when sending the test email, please check your SMTP settings carefully and make sure that they are correct.
+:::tip
+If you receive an error message when sending the test email, please check your SMTP settings carefully and make sure that they are correct.
+:::
 
-## Changing initial admin user
+## Changing Initial Admin User
 
 You MUST set up [email with SMTP](#sending-emails) before editing the initial admin user.
 
@@ -50,9 +52,9 @@ You MUST set up [email with SMTP](#sending-emails) before editing the initial ad
 4. Click **Save Changes**.
 5. You will now receive a confirmation email to the new email address. Click the link in the email to verify the changes.
 
-**Step 2: Change password**
+**Step 3: Change password**
 
 1. Go to **Profile > Settings**.
 2. Under **Account**, click **Change Password**.
-3. In the popup, click **Send Password Reset Email** and check email.
-4. You will now receive a password reset email to your account email. Click the link in the email to reset password.
+3. In the popup, click **Send Password Reset Email** and check your email.
+4. You will now receive a password reset email to your account email. Click the link in the email to reset your password.

@@ -11,10 +11,10 @@ To manage your Shlink instance, use the official web client at [app.shlink.io](h
 
 1.  Click **Add a server**.
 2.  **URL**: Enter your PikaPod URL (e.g., `https://your-pod.pikapod.net`).
-3.  **API Key**: Use the `INITIAL_API_KEY` found in your pod's **Settings > ENV VARS**.
+3.  **API Key**: Use the `INITIAL_API_KEY` found in *⚙️ Edit Pod Settings* > *Env Vars*.
 4.  Click **Create server**.
 
-## Generate new API key
+## Generate New API Key
 
 If you need to generate a new API key, you can insert it directly into the [database](/manage/database). Shlink on PikaPods uses MariaDB and stores API keys as **SHA256 hashes**.
 

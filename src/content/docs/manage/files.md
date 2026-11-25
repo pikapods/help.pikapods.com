@@ -10,7 +10,7 @@ Most apps keep the files you add in permanent storage, called *volumes*. Volumes
 
 ## Accessing Pod Files Using SFTP
 
-SFTP is a way to securely transfer files between your computer and a server. It's similar to FTP, but uses encryption. To access your pod's files, first enable SFTP in the pod's settings on the **Pod Settings > SFTP** tab. This will display the hostname, username and password to use.
+SFTP is a way to securely transfer files between your computer and a server. It's similar to FTP, but uses encryption. To access your pod's files, first enable SFTP in the pod's settings on the *⚙️ Edit Pod Settings* > *Files* tab. This will display the hostname, username and password to use.
 
 Then use any SFTP client to connect to the displayed hostname. Some popular SFTP clients:
 
@@ -19,7 +19,7 @@ Then use any SFTP client to connect to the displayed hostname. Some popular SFTP
 - [Rclone](https://rclone.org/sftp/): free, Unix command line, good for larger transfers
 - [OpenSSH SFTP](https://man.openbsd.org/sftp): free, Unix command line, included with OpenSSH
 
-To connect to a pod, you need the following details, which will be displayed in the _SFTP_ tab of your pod:
+To connect to a pod, you need the following details, which will be displayed in the *Files* tab under *⚙️ Edit Pod Settings*:
 
 - Hostname: This is the `.pikapod.net` domain of your pod. E.g. `eager-beaver.pikapod.net`
 - Port: This is always 22, which is the default port for SFTP
@@ -30,9 +30,11 @@ The first time you connect, you may be prompted to verify the server signature. 
 
 Here are the keys we deploy. Those will be the same for all servers.
 
-`3072 SHA256:pKUIT/ITOIp3xjvnQHhOyKgNC+Xd0xUSUR35pXPYwik (RSA)
+```text
+3072 SHA256:pKUIT/ITOIp3xjvnQHhOyKgNC+Xd0xUSUR35pXPYwik (RSA)
 256 SHA256:3J+hd0oGw8WFNQs4hzQfqXFxjaj63M5+xo9vDJxIkjs (ECDSA)
-256 SHA256:NxFGy3MAKP6FlZQS3QlOf7FWmxhNUQcD8u4PGWpOJ4M (ED25519)`
+256 SHA256:NxFGy3MAKP6FlZQS3QlOf7FWmxhNUQcD8u4PGWpOJ4M (ED25519)
+```
 
 Also note that you can only _write_ to subfolders, like `data` or `music` that you may see. You can **not** add files in the top folder, since those wouldn't be accessible in your pod.
 

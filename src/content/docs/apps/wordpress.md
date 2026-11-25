@@ -12,7 +12,7 @@ If you plan on using a custom domain or restoring an existing site, it's best to
 If you need to change the domain after installation, follow these steps:
 
 1. First change the domain in the `wp_options` table, options `home` and `siteurl` using the pod's [database access](/manage/database) feature.
-2. Update the domain in your _PikaPods_ control panel.
+2. Update the domain in your PikaPods control panel.
 3. Finally, some resources, like images may still point to the old domain on pages or posts. Solution is to use a [search and replace plugin](https://wordpress.org/plugins/better-search-replace/) to properly update those references. Otherwise images and files may keep referencing the old domain.
 
 ## Adjust PHP Settings
@@ -21,7 +21,7 @@ The default upload limit is set to 64 MB. You can increase this or adjust other 
 
 ## Adjust WordPress Settings
 
-You can use the `WORDPRESS_CONFIG_EXTRA` env var in the *PikaPods* Control panel to pass additional settings to `wp-config.php`. E.g. to change the memory limit enter `define('WP_MEMORY_LIMIT', '256M');`. **Note that this setting can potentially break your site.** So if your pod fails to start or shows errors in the logs, try adjusting this setting first.
+You can use the `WORDPRESS_CONFIG_EXTRA` env var under *⚙️ Edit Pod Settings* > *Env Vars* in the PikaPods control panel to pass additional settings to `wp-config.php`. E.g. to change the memory limit enter `define('WP_MEMORY_LIMIT', '256M');`. **Note that this setting can potentially break your site.** So if your pod fails to start or shows errors in the logs, try adjusting this setting first.
 
 ## Reset Password
 
@@ -30,7 +30,7 @@ You can reset your password using the database. Steps are like this:
 1. Enable the pod's [database access](/manage/database) feature
 2. Follow the [official WordPress docs](https://wordpress.org/documentation/article/reset-your-password/#through-phpmyadmin) to do the actual reset. Look for the `wp_users` table and then change the `user_pass` field of the user.
 
-## Sending emails
+## Sending Emails
 
 To enable WordPress email functionality for user registration, password reset, and notifications, you'll need to configure an external SMTP service. While this can be configured manually using the `WORDPRESS_CONFIG_EXTRA` environment variable, we recommend using one of these well-maintained SMTP plugins for easier setup:
 
@@ -44,7 +44,7 @@ For SMTP server details, you can use any email service that provides SMTP access
 
 For troubleshooting, WordPress debug mode offers detailed error messages. To activate:
 
-1. In **My Pods**, go to Pod `Settings > ENV VARS`.
+1. In **My Pods**, open *⚙️ Edit Pod Settings* > *Env Vars*.
 2. Update the `WORDPRESS_DEBUG` environment variable, setting it to `1`.
 3. Save your settings to apply the changes.
 

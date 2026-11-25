@@ -7,7 +7,7 @@ Immich is a high-performance, self-hosted photo and video backup solution with m
 
 New to Immich? Start with our [Immich tutorial](/tutorials/photo/immich-1-basics).
 
-## Using external libraries
+## Using External Libraries
 
 You can add an existing photo collection using the [External Libraries feature](https://github.com/imagegenius/docker-immich?tab=readme-ov-file#add-existing-libraries). The `/libraries` folder is already available in your pod for this purpose - simply connect via [SFTP](/manage/files) to upload your photos there. Then add the same path as library path in Immich (e.g. `/libraries/personal-library`).
 

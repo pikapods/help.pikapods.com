@@ -5,23 +5,23 @@ description: "Tips and fixes for running Ghost on PikaPods: sending emails, them
 
 Ghost is an open-source publishing platform for blogs, memberships, and paid newsletters. Here are a few tips and fixes for [Ghost](https://www.pikapods.com/apps/ghost) pods hosted on PikaPods. Full documentation is in the [official Ghost docs](https://ghost.org/docs/).
 
-## Sending emails
+## Sending Emails
 
 A working email configuration is required to send newsletters and account emails for new users. See our [email FAQ](/faq/technical#sending-emails) for general background. There are two kinds of emails and corresponding settings:
 
-### Bulk emails
+### Bulk Emails
 
 Those are used for sending newsletters. Currently **only Mailgun is supported**. To set up bulk emails, simply add your Mailgun (sub)domain and _private API key_ or a domain's _Sending API key_ in _Settings > Newsletter_. More [here](https://ghost.org/docs/faq/mailgun-newsletters/).
 
-### Transactional emails
+### Transactional Emails
 
 Used to e.g. send a welcome email or reset a user's password. You can use any SMTP service for this. Since we need Mailgun for bulk emails anyway, here are the steps for using Mailgun:
 
 1. Log into your Mailgun control panel
 2. Find the domain's _SMTP Credentials_ tab, as described [here](https://help.mailgun.com/hc/en-us/articles/203380100-Where-Can-I-Find-My-API-Key-and-SMTP-Credentials-#01GAJ2K1WS5GSWGKQ82TSVQSNV)
 3. Add a new SMTP user. The password will be shown in a grey box at the bottom-right
-4. Go back to _PikaPods_ and open the pod settings (or add those settings in the config file via [SFTP](/manage/files#accessing-pod-files-using-sftp))
-5. Under _Env Vars_ fill in the following details as shown [here](https://forum.ghost.org/t/failed-to-send-magic-link-email-error-when-trying-to-sign-up/31035/14)
+4. Go back to PikaPods and open *⚙️ Edit Pod Settings*
+5. Under *Env Vars* fill in the following details as shown [here](https://forum.ghost.org/t/failed-to-send-magic-link-email-error-when-trying-to-sign-up/31035/14)
    - `mail__transport`: `SMTP`
    - `mail__from`: `noreply@EXAMPLE.COM`
    - `mail__options__service`: `Mailgun`
@@ -30,13 +30,13 @@ Used to e.g. send a welcome email or reset a user's password. You can use any SM
    - `mail__options__secure`: `false` (or `true` when using port 465)
    - `mail__options__auth__user`: `postmaster@mg.EXAMPLE.com` (Or any other user you added in Mailgun. Be sure that the supplied user can send using the address given in `mail__from`.)
    - `mail__options__auth__pass`: The password shown in the grey box on Mailgun
-6. Now you should be able to send transactional emails. If you still get an error, check the pod's logs in _PikaPods_'s control panel. It will show the detailed error.
+6. Now you should be able to send transactional emails. If you still get an error, check the pod's logs in the PikaPods control panel. It will show the detailed error.
 
 ## Editing `config.json`
 
-The upstream image currently [doesn't support](https://github.com/docker-library/ghost/issues/73) editing or persisting configuration files. All configuration is done via env vars. We already support many different Ghost options. If you need more added, please get in touch.
+The upstream image currently [doesn't support](https://github.com/docker-library/ghost/issues/73) editing or persisting configuration files. All configuration is done via *Env Vars* or Ghost's web interface. We already support many different Ghost options. If you need more added, please get in touch.
 
-## Customizing robots.txt
+## Customizing `robots.txt`
 
 To customize the robots.txt file for your Ghost site:
 
@@ -51,7 +51,7 @@ Example `robots.txt` content:
 User-agent: *
 ```
 
-## Casper theme missing
+## Casper Theme Missing
 
 When using the default _Casper_ theme, in rare cases the site may look broken after a pod restart. This is due to a [known issue](https://github.com/docker-library/ghost/issues/230) with Docker adding a broken symlink. If you experience this issue, go to _Settings > Design > Change Theme_ and reinstall the desired theme.
 
@@ -67,7 +67,7 @@ Ghost can use MinIO (an S3-compatible storage service) for storing images and ot
    - Create the path `adapters/storage/minio` if it doesn't exist
    - Upload the contents of [ghost-minio](https://github.com/captbrogers/ghost-minio) repository into this directory
 
-2. Configure the storage adapter in pod `Settings > ENV VARS` with your MinIO credentials:
+2. Configure the storage adapter in *⚙️ Edit Pod Settings* > *Env Vars* with your MinIO credentials:
    - `storage__active`: `minio`
    - `storage__minio__accessKey`: Your MinIO access key
    - `storage__minio__secretKey`: Your MinIO secret key
@@ -100,12 +100,12 @@ Ghost has introduced two-factor authentication for staff accounts. By default, t
 
 If you prefer to disable this feature, you can do so by:
 
-1. Go to your pod settings in the PikaPods control panel
-2. Navigate to the "ENV VARS" section
+1. Open *⚙️ Edit Pod Settings* in the PikaPods control panel
+2. Navigate to the *Env Vars* tab
 3. Set the following environment variable:
    - `security__staffDeviceVerification`: `false`
 
-If you wish to keep 2FA enabled, you must set up [Transactional emails](#transactional-emails) as described above, as these are required for sending verification codes.
+If you wish to keep 2FA enabled, you must set up [Transactional Emails](#transactional-emails) as described above, as these are required for sending verification codes.
 
 For more information about Ghost's 2FA feature, see the [official changelog](https://ghost.org/changelog/2fa/).
 
@@ -113,7 +113,7 @@ For more information about Ghost's 2FA feature, see the [official changelog](htt
 
 If you can't log in and password reset emails aren't working, you can reset your Ghost admin password directly in the pod's database:
 
-1. In the PikaPods control panel, go to _Edit Pod Settings > Database_ and turn on _Enable Database Access_ (see [Database access](/manage/database)).
+1. In the PikaPods control panel, go to *⚙️ Edit Pod Settings* > *Database* and turn on *Enable Database Access* (see [Database access](/manage/database)).
 2. Open the Adminer link and log in using the credentials displayed on that page.
 3. Open the `users` table and locate your admin account.
 4. Generate a new bcrypt hash (cost factor 10, `$2a$` or `$2b$` format) for your new password, for example with [bcrypt-generator.com](https://bcrypt-generator.com/). Replace the value in the `password` field with the new hash and save.

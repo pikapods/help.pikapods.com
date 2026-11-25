@@ -6,7 +6,7 @@ sidebar:
   order: 0
 ---
 
-Setup tips and fixes for specific apps. You can also reach these pages via _See FAQ_ on a pod in your control panel.
+Setup tips and fixes for specific apps. You can also reach these pages via *FAQ* on a pod card in your control panel.
 
 - [Activepieces](/apps/activepieces)
 - [Actual Budget](/apps/actual)
@@ -42,6 +42,6 @@ Setup tips and fixes for specific apps. You can also reach these pages via _See 
 - [Uptime Kuma](/apps/uptime-kuma)
 - [WordPress](/apps/wordpress)
 
-## App not listed?
+## App Not Listed?
 
 Not every app needs a page here. See [Support for Individual Apps](/faq/apps#support-for-individual-apps) for where to find help with other apps.

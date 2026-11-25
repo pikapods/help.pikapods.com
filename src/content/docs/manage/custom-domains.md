@@ -12,19 +12,21 @@ Using a custom domain with your pod allows you to make it available under your o
 If you don't have a domain yet, it's also easy to register one. [Domaintyper](https://domaintyper.com/) is a good starting point to find available domains. To compare prices, we like [TLDes](https://tldes.com/cheapest-domains) (no affiliation).
 
 :::tip
-[Watch the video tutorial](https://www.youtube.com/watch?v=AvKZ2J_GChA) for the full process from buying a domain to setting it up with _PikaPods_.
+[Watch the video tutorial](https://www.youtube.com/watch?v=AvKZ2J_GChA) for the full process from buying a domain to setting it up with PikaPods.
 :::
 
 ## Using Custom Domains
 
 To use your own domain, you need to add a `CNAME` or `ALIAS` record and set your pod's `pikapod.net` domain as target.
 
-> We will also apply for a free SSL certificate for each mapped domain. This ensures all data going to your pod is encrypted. It can take a few minutes before the pod is reachable from the new domain. You may see an error before this.
+:::note
+We will also apply for a free SSL certificate for each mapped domain. This ensures all data going to your pod is encrypted. It can take a few minutes before the pod is reachable from the new domain. You may see an error before this.
+:::
 
 Steps to use a custom domain:
 
-1. Open _Pod Settings_ and then the _Domain_ tab.
-2. Enable _Custom Domain_. Take note of your pod's `xxx-yyy.pikapod.net` subdomain
+1. Open *⚙️ Edit Pod Settings* and then the *Domain* tab.
+2. Enable *Custom Domain*. Take note of your pod's `xxx-yyy.pikapod.net` subdomain.
 3. Ensure no CAA records are set that may prevent us from applying for an SSL certificate. If you already use CAA, please also add `sectigo.com`, as mentioned [here](https://help.zerossl.com/hc/en-us/articles/360060119753-Invalid-CAA-Records), **and** `letsencrypt.org`, as mentioned [here](https://letsencrypt.org/docs/caa/).
 4. Add a DNS record with your domain provider. Which one depends on the kind of domain you want to use:
 

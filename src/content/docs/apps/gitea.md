@@ -5,14 +5,14 @@ description: "Tips and fixes for running Gitea on PikaPods: using Git over HTTPS
 
 [Gitea](https://about.gitea.com/) is a lightweight, self-hosted Git service with a web UI, issues, pull requests, and a built-in package registry. This help page addresses common scenarios for users who have [deployed Gitea on PikaPods](https://www.pikapods.com/apps/gitea). For anything not covered here, see the [official Gitea docs](https://docs.gitea.com/).
 
-## Git over HTTPS only
+## Git Over HTTPS Only
 
 PikaPods exposes a single **HTTPS** port per pod on its shared infrastructure, so the separate SSH port a Git server would normally listen on can't be reached from the outside. As a result, **SSH access is not available** — this applies to all Git-based apps on PikaPods (Gitea and Forgejo alike). The SSH clone URL shown in the web UI won't work; ignore it.
 
 All Git operations work over HTTPS instead. Clone, pull, and push against your pod's HTTPS URL:
 
 ```
-git clone https://your-pod.pikapods.net/user/repo.git
+git clone https://your-pod.pikapod.net/user/repo.git
 ```
 
 Authenticate with your username and password, or — recommended — a **personal access token** created under _Settings > Applications_ in Gitea. Use the token in place of your password when Git prompts for credentials.

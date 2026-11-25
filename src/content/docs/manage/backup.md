@@ -6,7 +6,7 @@ sidebar:
   order: 4
 ---
 
-You own your data at _PikaPods_ — and that includes backing it up. We take measures at multiple levels to reduce the risk of data loss, but no hosting provider can promise your data back. **If the data in your pod is important to you, set up your own backups.** Our [incremental backups to S3](#incremental-backups-to-s3) do this automatically each night, into storage you control and can restore from without us.
+You own your data at PikaPods — and that includes backing it up. We take measures at multiple levels to reduce the risk of data loss, but no hosting provider can promise your data back. **If the data in your pod is important to you, set up your own backups.** Our [incremental backups to S3](#incremental-backups-to-s3) do this automatically each night, into storage you control and can restore from without us.
 
 There are three kinds of backups:
 
@@ -18,52 +18,52 @@ There are three kinds of backups:
 
 If you keep critical data in your pod and require your own daily backup, then our incremental backups to external S3 storage are the best solution. They can be triggered manually or daily at night and take **incremental, encrypted, deduplicated and compressed snapshots** using [Restic](https://restic.readthedocs.io/en/). This has the benefit that only changed files are copied and the backup doesn't need as much space. You can also provide your own S3-based storage, which moves the data to another company for extra redundancy.
 
-<img src="/manage/s3-screens.png"/>
+<img src="/manage/s3-screens.png" alt="PikaPods S3 backup settings overview" />
 
 Follow the steps below to set up incremental backups:
 
 ### S3 Storage Provider
 
-_PikaPods_ doesn't offer backup storage and it's best practice to keep backups with another provider. _S3_ is a standardized storage protocol, first introduced by Amazon and now offered by many companies. You can use any one of them. To make the choice easier, here are the ones we recommend. The [provider setup reference](#provider-setup-reference) further down has setup details for these and for more providers our users reported to be working.
+PikaPods doesn't offer backup storage and it's best practice to keep backups with another provider. _S3_ is a standardized storage protocol, first introduced by Amazon and now offered by many companies. You can use any one of them. To make the choice easier, here are the ones we recommend. The [provider setup reference](#provider-setup-reference) further down has setup details for these and for more providers our users reported to be working.
 
 - [**Backblaze B2**](https://www.backblaze.com/cloud-storage): A reliable and established choice priced at $6/TB/month. Some data transfer is included, so unless you download your backup very often, you will only pay for what you use each month. 10 GB are free, which is enough to keep backups of smaller pods.
 - [**iDrive e2**](https://www.idrive.com/s3-storage-e2/): A more recent addition, if you are looking for a lower price. You need to commit for a year, but get 50% off the first year and then pay around $4-5/TB/month.
 - [**Amazon AWS S3**](https://aws.amazon.com/s3/): The best-known offering, but also the most expensive and more complicated to set up. Can make sense, if you already use other services from AWS.
 
-### _PikaPods_ Backup Settings
+### PikaPods Backup Settings
 
 After signing up with your chosen provider, create a "bucket" to hold your data, then create an access key for it. Providers use different names for this, but you always end up with an **access key ID** and a **secret key**. Please be sure to limit the key to this one bucket only. The [provider setup reference](#provider-setup-reference) has the exact steps for each provider. Most providers show the secret key only once, so copy it before closing the dialog.
 
-With your bucket and key set up, you can add them in _PikaPods_ under _Pod Settings > Backups_. Here you enter the bucket hostname (often called endpoint), the bucket name and the related access key ID and secret key. These settings are separate for each pod, since _one_ bucket can only keep backups of _one_ pod.
+With your bucket and key set up, you can add them in PikaPods under *⚙️ Edit Pod Settings* > *Backups*. Here you enter the bucket hostname (often called endpoint), the bucket name and the related access key ID and secret key. These settings are separate for each pod, since _one_ bucket can only keep backups of _one_ pod.
 
 For the endpoint, be sure to use the hostname **without** the bucket name prepended. Also don't enter `https://`. The [provider setup reference](#provider-setup-reference) lists the endpoint for each provider.
 
-<img src="/manage/s3-setup.png" width="400" />
+<img src="/manage/s3-setup.png" alt="PikaPods S3 bucket setup form" width="400" />
 
-After entering and verifying those settings, you can trigger your first backup via _More > Backup_. Depending on the size of the pod's files and database, this can take several minutes. After a successful backup, the date and time will be shown in the pod's overview and in _Pod Settings > Backups_.
+After entering and verifying those settings, you can trigger your first backup via *More > Backup*, or enable **Enable daily automated backups** in *⚙️ Edit Pod Settings* > *Backups*. Daily automated backups briefly pause your pod each day between midnight and 6 AM in your time zone to ensure a consistent backup. Depending on the size of the pod's files and database, a backup can take several minutes. After a successful backup, the date and time will be shown in the pod's overview and in *⚙️ Edit Pod Settings* > *Backups*.
 
 ### Save Your Repository Password
 
-With backups configured, _Pod Settings > Backups_ also shows a **Repository URL** and a **Repository Password**. The password encrypts your backup and is the only way to decrypt it again.
+With backups configured, *⚙️ Edit Pod Settings* > *Backups* also shows a **Repository URL** and a **Repository Password**. The password encrypts your backup and is the only way to decrypt it again.
 
 :::caution
-Copy the _Repository Password_ somewhere safe outside your pod now, ideally into a password manager. Without it your backup can't be decrypted and is useless. We don't keep a copy of this password after a pod was deleted.
+Copy the _Repository Password_ somewhere safe outside your pod now, ideally into a password manager. Without it your backup can't be decrypted and is useless. We don't keep a copy of this password after a pod is deleted.
 :::
 
 ### Cost and Security
 
 This section has additional steps you can take to secure your backups and S3 storage account.
 
-To avoid unexpected charges from your chosen S3 storage provider in relation to _PikaPods_ backups:
+To avoid unexpected charges from your chosen S3 storage provider in relation to PikaPods backups:
 
 - Regularly review the storage usage. If you add a lot of data to a pod, the backup will be larger too.
-- If you enable the setting to prune, old snapshots are automatically pruned. 60 days of snapshots are stored with pruning enabled. At this time, the retention policy is not user-configurable from the control panel.
-- Be mindful of outgoing data transfer charges. While traffic is free at _PikaPods_, S3 providers sometimes charge for it. Usually _uploading_ data to them is free, but _downloading_ it can be expensive. Creating a new backup on _PikaPods_ will _download_ very little data to the S3 service, but restoring a backup or pruning it can use more.
-- Be sure to limit the access of keys you add on _PikaPods_ to _one bucket only_. _PikaPods_ doesn't need access to your other bucket and doesn't need permission to create buckets. It will only ever write files to the bucket you set up.
+- With daily automated backups enabled, you can also enable **Prune old backups after 60 days** to automatically remove snapshots older than 60 days (at least the last 7 snapshots are always kept). At this time, the retention policy is not user-configurable from the control panel.
+- Be mindful of outgoing data transfer charges. While traffic is free at PikaPods, S3 providers sometimes charge for it. Usually _uploading_ data to them is free, but _downloading_ it can be expensive. Creating a new backup on PikaPods will _download_ very little data from the S3 service, but restoring a backup or pruning it can use more.
+- Be sure to limit the access of keys you add on PikaPods to _one bucket only_. PikaPods doesn't need access to your other buckets and doesn't need permission to create buckets. It will only ever write files to the bucket you set up.
 
 To ensure the integrity of your backups:
 
-- Regularly verify your backups: While _PikaPods_ takes every possible measure to ensure usable backups, there could be unexpected failures or edge cases with individual apps that make a backup incomplete. Doing a trial restore of a backup can uncover such issues.
+- Regularly verify your backups: While PikaPods takes every possible measure to ensure usable backups, there could be unexpected failures or edge cases with individual apps that make a backup incomplete. Doing a trial restore of a backup can uncover such issues.
 
 ### Checking Backup Integrity
 
@@ -71,11 +71,11 @@ We recommend verifying your backups monthly to ensure they're complete and usabl
 
 To verify your backup integrity, follow the [Restic documentation on checking integrity and consistency](https://restic.readthedocs.io/en/stable/045_working_with_repos.html#checking-integrity-and-consistency). If issues are found, you can repair them using the [troubleshooting guide](https://restic.readthedocs.io/en/stable/077_troubleshooting.html).
 
-### Restore Backups using Restic
+### Restore Backups Using Restic
 
 Incremental backups use the [Restic](https://restic.readthedocs.io/en/) tool. To verify or restore a pod backup, follow the steps below. Note that this is an advanced task that needs a computer with Restic installed and some experience with the command line, but we are working on integrating the process into the control panel eventually.
 
-First take note of the _Repository URL_ and _Repository Password_ found in _Pod Settings > Backups_. Then you will also need the access key ID and secret key created with your S3 provider. Those can't be retrieved from _PikaPods_ for security reasons, but you could recreate them if needed.
+First take note of the _Repository URL_ and _Repository Password_ found in *⚙️ Edit Pod Settings* > *Backups*. Then you will also need the access key ID and secret key created with your S3 provider. Those can't be retrieved from PikaPods for security reasons, but you could recreate them if needed.
 
 It's easiest to set all those settings as environment variables. For example for S3:
 
@@ -86,7 +86,7 @@ export AWS_ACCESS_KEY_ID=xxxx
 export AWS_SECRET_ACCESS_KEY=xxxx
 ```
 
-Then you can list all the snapshots in this bucket. _PikaPods_ adds some metadata, like the app name to each. The official [Restic docs](https://restic.readthedocs.io/en/stable/045_working_with_repos.html#listing-all-snapshots) have more details on this.
+Then you can list all the snapshots in this bucket. PikaPods adds some metadata, like the app name to each. The official [Restic docs](https://restic.readthedocs.io/en/stable/045_working_with_repos.html#listing-all-snapshots) have more details on this.
 
 ```
 $ restic snapshots
@@ -98,22 +98,22 @@ After deciding which snapshot to use, you can list its files. Docs on this are [
 $ restic ls XXXXXXX
 ```
 
-Then to actually [restore](https://restic.readthedocs.io/en/stable/050_restore.html) the whole snapshot:
+Then to actually [restore](https://restic.readthedocs.io/en/stable/050_restore.html) the whole snapshot into a local directory:
 
 ```
-$ restic restore XXXXXXX
+$ restic restore XXXXXXX --target ./restore
 ```
 
 To restore the data to a new pod:
 
-1. Add new empty pod and enable [database](/manage/database) and [file access](/manage/files).
-2. Stop this empty pod. Data in this pod will be removed.
+1. Add a new empty pod and enable [database](/manage/database) and [file access](/manage/files).
+2. Pause this empty pod via *More > Pause Pod*. Data in this pod will be removed.
 3. In the database, remove all tables and import the SQL dump from the backup.
 4. Using SFTP, put back all the files. Remove any existing files in the process.
-5. Start the new pod and check the [logs](/manage/debug) for potential errors
+5. Resume the new pod via *More > Resume Pod* and check the [logs](/manage/debug) for potential errors.
 
 Some pods don't use a database or don't use files. In this case those steps can be skipped. You may also need to
-set the pod's environment variables (_Env Vars_) again. Those aren't contained in the Restic backup.
+set the pod's environment variables (*Env Vars*) again. Those aren't contained in the Restic backup.
 
 ### Provider Setup Reference
 
@@ -162,12 +162,12 @@ All persistent pod data is available over [SFTP](/manage/files#accessing-pod-fil
 
 You can make a full pod backup by following the steps:
 
-1. Enable [SFTP](/manage/files#accessing-pod-files-using-sftp) in the pod's settings.
-2. Enable [Database access](/manage/database#edit-the-pods-database) in the pod's settings.
-3. Stop the pod to make sure all data from memory is written to disk (e.g. for SQLite or Mongo databases)
+1. Enable [SFTP](/manage/files#accessing-pod-files-using-sftp) in *⚙️ Edit Pod Settings* > *Files*.
+2. Enable [Database access](/manage/database#edit-the-pods-database) in *⚙️ Edit Pod Settings* > *Database*.
+3. Pause the pod (*More > Pause Pod*) to make sure all data from memory is written to disk (e.g. for SQLite or Mongo databases).
 4. Log into the pod via SFTP and copy all files.
 5. Log into the pod's database and _Export_ the whole database.
-6. Start your pod again
+6. Resume your pod (*More > Resume Pod*).
 
 ## Full Server Backups
 

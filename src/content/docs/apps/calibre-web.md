@@ -7,11 +7,11 @@ Calibre Web is a web app for browsing, reading, and downloading e-books from a C
 
 ## Uploading Books
 
-To enable uploading books from the web interface, got o _Admin > Edit Basic Configuration > Feature Configuration > Enable Uploads_. Then click _Save_. After this, an _Upload_ button will appear in the top-right corner.
+To enable uploading books from the web interface, go to _Admin > Edit Basic Configuration > Feature Configuration > Enable Uploads_. Then click _Save_. After this, an _Upload_ button will appear in the top-right corner.
 
 ## Reading Books
 
-To enable uploading books from the web interface, got o _Admin > Edit Basic Configuration > External Binaries_ and set the value as follows:
+To enable reading books from the web interface, go to _Admin > Edit Basic Configuration > External Binaries_ and set the value as follows:
 
 - *Path to Calibre binaries*: `/usr/bin/`
 - _Path to Kepubify E-Book Converter_: `/usr/bin/kepubify`

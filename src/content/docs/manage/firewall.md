@@ -5,18 +5,22 @@ sidebar:
   order: 6
 ---
 
-The Firewall feature allows you to restrict access to your pod by creating an allowlist of IP addresses. This effectively blocks all connections from IPs not listed in the Firewall tab before they reach your pod.
+The Firewall feature allows you to restrict access to your pod by creating an allowlist of IP addresses or CIDR ranges. This effectively blocks all connections from IPs not listed in the *Firewall* tab before they reach your pod.
 
 ## Enabling the Firewall
 
-1. Open _Pod Settings_ and then the _Firewall_ tab.
-2. Add the IP addresses that should be able to reach your pod. You can look up your own [external IP](https://whatismyipaddress.com/).
+1. Open *⚙️ Edit Pod Settings* and then the *Firewall* tab.
+2. Click **Add My IP** to add your current external IP address, or enter individual IP addresses or CIDR ranges (e.g. `192.168.1.0/24` or `2001:db8::/32`).
 3. From now on, only the listed IPs can connect.
+
+## Allowing Cloudflare IPs
+
+If your pod uses a [custom domain](/manage/custom-domains) proxied through Cloudflare, you can enable **Also allow Cloudflare IPs** in the *Firewall* tab. This appends Cloudflare's edge IP ranges to your allowlist so traffic proxied through Cloudflare can still reach your pod while direct access from other IPs is blocked. At least one other IP or range must be in the allowlist for this option to take effect.
 
 ## Access Issues
 
 :::caution
-External IPs can change. If you have access issues, confirm your [external IP](https://whatismyipaddress.com/) first.
+External IPs can change. If you have access issues, open the *Firewall* tab and use **Add My IP** to make sure your current IP address is listed.
 :::
 
 Our servers support both IPv6 and IPv4. Usually, IPv6 will be preferred by modern networks. If you experience access issues:

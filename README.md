@@ -12,7 +12,7 @@ Has the content of the PikaPods help site at [help.pikapods.com](https://help.pi
 - Production build: `pnpm build` (output in `dist/`, also validates internal links)
 - Preview the build: `pnpm preview`
 
-Pages live in `src/content/docs/`. Sidebar structure is set in `astro.config.mjs`, ordering per page via `sidebar.order` front matter. Use `.mdx` only for pages that need components like `<Tabs>`.
+Pages live in `src/content/docs/`. See [STYLE_GUIDE.md](STYLE_GUIDE.md) for writing guidelines, UI label conventions, and formatting rules. Sidebar structure is set in `astro.config.mjs`, ordering per page via `sidebar.order` front matter. Use `.mdx` only for pages that need components like `<Tabs>`.
 
 App help pages in `src/content/docs/apps/` are added to the sidebar automatically, but also need an entry in `apps/index.md`. New tutorials need an entry in the sidebar and in `tutorials/index.md`.
 

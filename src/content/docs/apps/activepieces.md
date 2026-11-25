@@ -40,9 +40,9 @@ We have created a [GitHub issue](https://github.com/activepieces/activepieces/is
 
 If you encounter errors after an Activepieces update, such as module installation failures, missing dependencies, or flows that fail to work properly, clearing the cache folder can force a clean reinstall of dependencies.
 
-1. Pause the pod via _More > Pause_ in the PikaPods dashboard.
+1. Pause the pod via *More > Pause Pod* in the PikaPods dashboard.
 2. Access your pod files via SFTP. (Refer to [this page](/manage/files) for accessing pod files using SFTP.)
 3. Delete everything inside the `cache` folder.
-4. Resume the pod via _More > Resume_ in the PikaPods dashboard.
+4. Resume the pod via *More > Resume Pod* in the PikaPods dashboard.
 
 This will trigger Activepieces to reinstall all dependencies and pieces from scratch, which often resolves issues caused by incomplete or corrupted installations during updates.

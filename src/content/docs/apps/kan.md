@@ -5,7 +5,7 @@ description: "Tips and fixes for running Kan on PikaPods: setting up S3 storage 
 
 Kan is an open-source, Trello-style kanban board for planning and tracking work with your team. Here are a few tips and fixes for [Kan](https://www.pikapods.com/apps/kan) pods hosted on PikaPods. Anything else is covered in the [official Kan docs](https://docs.kan.bn/).
 
-## Uploading attachments and avatars
+## Uploading Attachments and Avatars
 
 [Kan](https://kan.bn/) only supports file uploads (card attachments and user avatars) through external S3-compatible object storage. Unlike other apps, it can't store files on the pod's disk, and PikaPods doesn't include built-in S3 storage. You need to bring your own bucket from a provider such as Cloudflare R2, Backblaze B2 or AWS S3.
 
@@ -13,9 +13,9 @@ Until storage is configured, any upload fails with:
 
 > Upload failed: Failed to upload attachment. Please try again.
 
-### Configure S3 storage
+### Configure S3 Storage
 
-Once you have a bucket, open your pod's settings, go to _Edit Pod Settings_ > _Env Vars_ and set:
+Once you have a bucket, open *⚙️ Edit Pod Settings* > *Env Vars* and set:
 
 * `S3_ENDPOINT` — your S3 endpoint URL.
 * `S3_REGION` — your S3 region, for example `auto` or `eu-central-1`.
@@ -29,7 +29,7 @@ Once you have a bucket, open your pod's settings, go to _Edit Pod Settings_ > _E
 
 Saving changes to environment variables automatically restarts your pod.
 
-### Larger attachments
+### Larger Attachments
 
 The default upload size limit is 1 MB. To upload larger files, also set `NEXT_API_BODY_SIZE_LIMIT`, for example to `50mb`.
 

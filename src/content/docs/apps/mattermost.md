@@ -18,9 +18,9 @@ After the pod is created, open it via _Open Pod_ and follow those steps to creat
 
 That's it! You should now be in your team's workspace. You can then go to the _System Console_ or add more teams via the menus in the top-left.
 
-**Also be sure to disable open registrations, if appropriate, by setting the `MM_TEAMSETTINGS_ENABLEOPENSERVER` env var to `false` in your _PikaPods_ control panel.**
+**Also be sure to disable open registrations, if appropriate, by setting `MM_TEAMSETTINGS_ENABLEOPENSERVER` to `false` under *⚙️ Edit Pod Settings* > *Env Vars* in the PikaPods control panel.**
 
-## Sending emails
+## Sending Emails
 
 Mattermost doesn't always require emails, but uses it for select features, like forgotten passwords. To enable sending email, add your SMTP details as described [here](https://docs.mattermost.com/configure/smtp-email.html). You can use your existing email service or a service recommended in our [email section](/faq/technical#sending-emails).
 
@@ -37,7 +37,7 @@ Enabling this configuration change allows you to upload custom plugins, expandin
 
 ## Troubleshooting
 
-### Server fails to start after update: archived channels error
+### Server Fails to Start After Update: Archived Channels Error
 
 After updating to newer Mattermost versions (e.g., 11.0.1), some pods may fail to start with an error similar to:
 

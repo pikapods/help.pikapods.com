@@ -16,7 +16,7 @@ sidebar:
 
 Creating an account on PikaPods is simple and doesn't require credit card information. You will receive **$5 starting credit** upon registration, which you can use to run and test open-source apps from our library. Here's how to create your account:
 
-1. Click the **Sign Up** button located in the upper right corner of your screen.
+1. Go to the [PikaPods sign-up page](https://www.pikapods.com/register) (or click **Sign Up** in the upper right corner of [pikapods.com](https://www.pikapods.com/)).
 2. Fill out the required fields: provide your name, email address, and set a password.
 3. Check the box to agree with our privacy policy.
 4. Click **Sign Up** to complete the process.
@@ -33,10 +33,10 @@ Once your account is set up, you can start exploring the library of available op
 
 ## Change App Settings
 
-You can always customize the settings for each app in your pod's library. Keep in mind that modifying compute resources may affect your monthly cost. Here's how to adjust app settings:
+You can always customize the settings for each app on your **My Pods** dashboard. Keep in mind that modifying compute resources may affect your monthly cost. Here's how to adjust app settings:
 
-1. Click on the **settings icon** located under the app you want to configure.
-2. You can now edit the name, compute resources, set a [custom domain](/manage/custom-domains), enable [SFTP](/manage/files), and enable [database](/manage/database) access.
+1. Click *⚙️ Edit Pod Settings* at the bottom-left of the pod card you want to configure.
+2. You can now edit the name, *Env Vars*, compute resources, set a [custom domain](/manage/custom-domains), configure the [firewall](/manage/firewall), enable [SFTP](/manage/files) or [database](/manage/database) access, and set up [backups](/manage/backup).
 3. Click **Save** to save your settings.
 
 ## Next Steps

@@ -36,16 +36,18 @@ WHERE "email" = 'you@example.com';
 For future password resets, configure SMTP for n8n. See our [email FAQ](/faq/technical#sending-emails) and the [official n8n user management docs](https://docs.n8n.io/hosting/configuration/user-management-self-hosted/).
 
 
-## Prune old executions automatically
+## Prune Old Executions Automatically
 
-Execution history grows over time and can eventually slow n8n down or cause problems when it updates. To keep it in check, enable automatic pruning. These are available under _Env Vars_ in your pod settings:
+Execution history grows over time and can eventually slow n8n down or cause problems when it updates. To keep it in check, enable automatic pruning. These are available under *⚙️ Edit Pod Settings* > *Env Vars*:
 
 * `EXECUTIONS_DATA_PRUNE` — set to `true` to automatically delete old executions.
-* `EXECUTIONS_DATA_MAX_AGE` — how long (in hours) to keep finished executions. For example, `186` keeps roughly a week of history.
+* `EXECUTIONS_DATA_MAX_AGE` — how long (in hours) to keep finished executions. For example, `168` keeps a week of history.
 
 With pruning enabled, n8n removes old execution records on its own, keeping the database small and the instance responsive.
 
-> **Note:** pruning only removes **finished** executions. It keeps history from building up over time, but it won't clear a backlog that has already accumulated — use *Clearing the backlog* above for that.
+:::note
+Pruning only removes **finished** executions. It keeps history from building up over time, but it won't clear a backlog that has already accumulated — see [High CPU From a Large Execution Backlog](#high-cpu-from-a-large-execution-backlog) below for that.
+:::
 
 
 ## High CPU From a Large Execution Backlog
@@ -61,7 +63,7 @@ n8n needs a long time to start and you may notice:
 * The logs may also show `timeout exceeded when trying to connect` errors, even though your database is running fine.
 * The instance feels slow, and the number of stored executions does not go down on its own.
 
-### Confirm it in the database
+### Confirm It in the Database
 
 Connect to your pod's PostgreSQL database (for example with Adminer) and run:
 
@@ -80,7 +82,7 @@ success     171
 error       138
 ```
 
-### Resolve it
+### Resolve It
 
 Clear the stored executions, then restart your pod:
 
@@ -90,9 +92,11 @@ TRUNCATE execution_entity RESTART IDENTITY CASCADE;
 
 After running this, restart the n8n pod from your dashboard. With the backlog gone, CPU usage should return to normal and the repeated log messages should stop.
 
-> **What is deleted:** only your **execution history** — the logs of past, failed, and pending workflow runs. Your **workflows and credentials are not affected**; they are stored separately and remain intact. The pending runs that are removed were stuck and would not have completed anyway.
+:::note[What is deleted]
+Only your **execution history** — the logs of past, failed, and pending workflow runs. Your **workflows and credentials are not affected**; they are stored separately and remain intact. The pending runs that are removed were stuck and would not have completed anyway.
+:::
 
-## Calling one workflow from another on the same instance
+## Calling One Workflow From Another on the Same Instance
 
 If a workflow needs to trigger another workflow running on the same n8n instance, use the built-in **Execute Workflow** node instead of an HTTP Request node calling the webhook's URL.
 

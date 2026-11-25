@@ -5,12 +5,12 @@ sidebar:
   order: 2
 ---
 
-## Support for individual apps
+## Support for Individual Apps
 If you have any concerns with your PikaPods account, billing, or an offline pod, email [hello@pikapods.com](mailto:hello@pikapods.com) any time. You will generally receive a response within a few hours on working days.
 
 Beyond this, we can't offer support for individual apps or their features. This is because they are developed, maintained, and distributed by independent third-party authors and communities. Our focus is on ensuring your hosting environment runs smoothly and we only charge for the resources to host these apps and don't monetize your data or charge for premium features. If you need additional support, see these options:
 
-- **App Help**: Many apps have a [help page](/apps) that explains setup steps and common issues. You also find it via *See FAQ* in your pod control panel.
+- **App Help**: Many apps have a [help page](/apps) that explains setup steps and common issues. You also find it via *FAQ* on your pod card in the control panel.
 - **Project documentation**: Visit the *Project Page* link of an app and read their documentation.
 - **Settings documentation**: When editing a pod's environment variables (*Env Vars*), you will find a link to the official documentation explaining each setting.
 - **AI**: Try asking your AI agent (e.g. ChatGPT or Claude) to look at the screenshot or error logs. Instruct them to look for known issues, confirm the issue in the source code or provide the SQL to debug in the database.
@@ -20,15 +20,15 @@ Beyond this, we can't offer support for individual apps or their features. This 
 - **Freelancer**: For more complex projects, it can make sense to get a professional. Freelancer sites like [Upwork](https://www.upwork.com/) are good places to find expert sysadmins or web designers. This works even for smaller tasks.
 
 
-## Editing app files or source code
-At *PikaPods* we deploy all apps as isolated containers. A container is a ready-made package that bundles the app with everything it needs to run. It's built by the app author and distributed as a container image. This means you get the same experience as running the same image directly and can be sure there are no modifications to the app.
+## Editing App Files or Source Code
+At PikaPods we deploy all apps as isolated containers. A container is a ready-made package that bundles the app with everything it needs to run. It's built by the app author and distributed as a container image. This means you get the same experience as running the same image directly and can be sure there are no modifications to the app.
 
 Compared to other ways of deploying apps (like putting PHP files on shared hosting space), it's not recommended to make adjustments to any files that aren't explicitly mounted from the image and visible via SFTP. While it may work temporarily, all such changes will be lost during the next update or edit.
 
 In the large majority of cases, you will find that all necessary files are available via SFTP and no further changes are necessary. If you think a new mounted folder should be made available for an app, do get in [touch](mailto:hello@pikapods.com) and it will be reviewed.
 
 
-## Adding new apps
+## Adding New Apps
 New apps are regularly being added. If your favorite app isn't available yet, you can suggest or vote for it on our [feedback](https://feedback.pikapods.com/) page. For an app to be suitable for PikaPods, it should roughly match these criteria:
 
 - Be a web application and use one HTTPS port only
@@ -40,7 +40,7 @@ New apps are regularly being added. If your favorite app isn't available yet, yo
 - Be actively developed and security issues are addressed
 
 
-## Updating apps
+## Updating Apps
 
 Providing a stable experience is our top priority, so we don't roll out updates the moment they're released. Instead:
 
@@ -54,13 +54,13 @@ Providing a stable experience is our top priority, so we don't roll out updates 
 - We apply these ad-hoc, as soon as the bugfix release is available.
 - The update typically lands within a few hours.
 
-Want to know when your pod updates? Enable notifications under *Edit Pod Settings > Basics > Notify me of updates*.
+Want to know when your pod updates? Enable notifications under *⚙️ Edit Pod Settings* > *Basics* > *Notify me of updates*.
 
 
-## Missing environment variables
-Many apps are configured using environment variables, shown as *Env Vars* in your pod's settings. When adding new apps, we will add the most common and useful ones from the start. Sometimes this doesn't include very specific or newly added settings. If you find that an env var you want to use is missing, just send us an email to [hello@pikapods.com](mailto:hello@pikapods.com) and we will add it right away.
+## Missing Environment Variables
+Many apps are configured using environment variables, shown as *Env Vars* in *⚙️ Edit Pod Settings*. When adding new apps, we will add the most common and useful ones from the start. Sometimes this doesn't include very specific or newly added settings. If you find that an env var you want to use is missing, just send us an email to [hello@pikapods.com](mailto:hello@pikapods.com) and we will add it right away.
 
-## Disk usage and database storage
+## Disk Usage and Database Storage
 Some apps primarily store their data in a database rather than using disk storage. For these apps, the disk usage bar will not be visible in the dashboard, and adding disk storage is not necessary. Examples include apps like Umami Analytics that primarily use database storage.
 
-For database-intensive apps, we automatically allocate sufficient database storage space. Database storage does not count towards your disk usage quota and is provided free of charge.
+For database-intensive apps, we automatically allocate sufficient database storage space. Database storage does not count towards your disk usage quota and is provided free of charge under fair use, within normal usage of the app.

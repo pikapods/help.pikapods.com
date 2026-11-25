@@ -22,27 +22,27 @@ Automatic indexing will only start some minutes after upload. You can still foll
 
 Example:
 
-[<img src="/img/photoprism-example-photosync.png" width="250" />](/img/photoprism-example-photosync.png)
+[<img src="/img/photoprism-example-photosync.png" alt="PhotoPrism PhotoSync WebDAV settings example" width="250" />](/img/photoprism-example-photosync.png)
 
 
 ## Import from WebDAV Storage (e.g. Nextcloud)
 
-It's possible to import pictures from a remote WebDAV location, which e.g. Nextcloud (also available on PikaPods) can provide. Here the steps:
+It's possible to import pictures from a remote WebDAV location, which e.g. Nextcloud (also available on PikaPods) can provide. Here are the steps:
 
-1. Add PhotoPrism pod (make sure to config name and password)
-2. Log in as admin with "admin" and password that you just generated
+1. Add a PhotoPrism pod (make sure to configure the name and password)
+2. Log in as admin with "admin" and the password that you just generated
 3. Click on the user profile avatar in the bottom left
-4. Navigate to the "services" tab and click "connect"
-5. Create new tab and log into your previously set up Nextcloud page
-6. Click on user profile in top right 
-7. Navigate to security tab
-8. At bottom type "photoprism" into "app name" and click "create app password" (save these for later)
-9. Navigate to files tab in Nextcloud
-10. In bottom left click on "Files settings"
-11. Copy WebDAV address
-12. Head back to photoprism tab and paste in WebDAV URL, user, and password
-13. Enable Directory sync by clicking the little sync button on the remote. Chose appropriate folder and interval
-14. Give the server a couple hours to copy and index all files.
+4. Navigate to the "Services" tab and click "Connect"
+5. Open a new tab and log into your previously set up Nextcloud page
+6. Click on your user profile in the top right
+7. Navigate to the "Security" tab
+8. At the bottom, type "photoprism" into "App name" and click "Create new app password" (save this for later)
+9. Navigate to the "Files" tab in Nextcloud
+10. In the bottom left, click on "Files settings"
+11. Copy the WebDAV address
+12. Head back to the PhotoPrism tab and paste in the WebDAV URL, user, and password
+13. Enable Directory sync by clicking the little sync button on the remote. Choose the appropriate folder and interval
+14. Give the server a couple of hours to copy and index all files.
 
 
 ## Maximum Upload Size
@@ -58,8 +58,8 @@ Both limits apply to web uploads, so to upload larger files you generally need t
 To change these values:
 
 - Open the PikaPods control panel.
-- Click on the pod's settings.
-- Scroll down to the "ENV VARS" section.
+- Click *⚙️ Edit Pod Settings*.
+- Navigate to the *Env Vars* tab.
 - Set `PHOTOPRISM_UPLOAD_LIMIT` and `PHOTOPRISM_ORIGINALS_LIMIT` to your desired
   value in MB.
 - Click "Save".
