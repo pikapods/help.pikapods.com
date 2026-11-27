@@ -15,7 +15,7 @@ PikaPods hosts dozens of independent open-source apps built by third-party autho
 - Pod features like [custom domains](/manage/custom-domains), [SFTP](/manage/files), [database access](/manage/database), [backups](/manage/backup), and the [firewall](/manage/firewall)
 - Exposing a [missing environment variable](#missing-environment-variables) or reviewing a new [SFTP folder mount](#editing-app-files-or-source-code)
 
-Email [hello@pikapods.com](mailto:hello@pikapods.com) (or click *Report Issue* on your pod card) any time—we generally reply within a few hours on working days.
+Click *Report Issue* on your pod card in the dashboard any time—we generally reply within a few hours on working days.
 
 **What we can't cover** is how to use an app's features, configure third-party plugins/themes, troubleshoot bugs inside the app itself, or do custom data migrations.
 
@@ -44,7 +44,7 @@ At PikaPods we deploy all apps as isolated containers. A container is a ready-ma
 
 Compared to other ways of deploying apps (like putting PHP files on shared hosting space), it's not recommended to make adjustments to any files that aren't explicitly mounted from the image and visible via SFTP. While it may work temporarily, all such changes will be lost during the next update or edit.
 
-In the large majority of cases, you will find that all necessary files are available via SFTP and no further changes are necessary. If you think a new mounted folder should be made available for an app, do get in [touch](mailto:hello@pikapods.com) and it will be reviewed.
+In the large majority of cases, you will find that all necessary files are available via SFTP and no further changes are necessary. If you think a new mounted folder should be made available for an app, click *Report Issue* on your pod card in the dashboard and it will be reviewed.
 
 
 ## Adding New Apps
@@ -77,7 +77,7 @@ Want to know when your pod updates? Enable notifications under *⚙️ Edit Pod 
 
 
 ## Missing Environment Variables
-Many apps are configured using environment variables, shown as *Env Vars* in *⚙️ Edit Pod Settings*. When adding new apps, we will add the most common and useful ones from the start. Sometimes this doesn't include very specific or newly added settings. If you find that an env var you want to use is missing, just send us an email to [hello@pikapods.com](mailto:hello@pikapods.com) and we will add it right away.
+Many apps are configured using environment variables, shown as *Env Vars* in *⚙️ Edit Pod Settings*. When adding new apps, we will add the most common and useful ones from the start. Sometimes this doesn't include very specific or newly added settings. If you find that an env var you want to use is missing, click *Report Issue* on your pod card in the dashboard and we will add it right away.
 
 ## Disk Usage and Database Storage
 Some apps primarily store their data in a database rather than using disk storage. For these apps, the disk usage bar will not be visible in the dashboard, and adding disk storage is not necessary. Examples include apps like Umami Analytics that primarily use database storage.
