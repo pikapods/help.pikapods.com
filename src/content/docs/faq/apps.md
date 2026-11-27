@@ -6,18 +6,37 @@ sidebar:
 ---
 
 ## Support for Individual Apps
-If you have any concerns with your PikaPods account, billing, or an offline pod, email [hello@pikapods.com](mailto:hello@pikapods.com) any time. You will generally receive a response within a few hours on working days.
 
-Beyond this, we can't offer support for individual apps or their features. This is because they are developed, maintained, and distributed by independent third-party authors and communities. Our focus is on ensuring your hosting environment runs smoothly and we only charge for the resources to host these apps and don't monetize your data or charge for premium features. If you need additional support, see these options:
+PikaPods hosts dozens of independent open-source apps built by third-party authors and communities. To keep hosting simple and priced purely on the resources you use, our team focuses on keeping your pod running smoothly rather than acting as a helpdesk for every app's features and internals.
 
-- **App Help**: Many apps have a [help page](/apps) that explains setup steps and common issues. You also find it via *FAQ* on your pod card in the control panel.
-- **Project documentation**: Visit the *Project Page* link of an app and read their documentation.
-- **Settings documentation**: When editing a pod's environment variables (*Env Vars*), you will find a link to the official documentation explaining each setting.
-- **AI**: Try asking your AI agent (e.g. ChatGPT or Claude) to look at the screenshot or error logs. Instruct them to look for known issues, confirm the issue in the source code or provide the SQL to debug in the database.
-- **Community forum or chat**: There may be a forum or chat room for the app to ask questions and get help from other users.
-- **Commercial support**: Sometimes the author will offer commercial support. This is also a great way to support the app's development.
-- **GitHub issue**: If you think there is a bug in the app or you have an idea for a new feature, you can raise it with the developers on their GitHub Issues page.
-- **Freelancer**: For more complex projects, it can make sense to get a professional. Freelancer sites like [Upwork](https://www.upwork.com/) are good places to find expert sysadmins or web designers. This works even for smaller tasks.
+**We're always happy to help with:**
+- Your PikaPods account, billing, or limits
+- Offline pods, crashes, failed updates, or resource issues
+- Pod features like [custom domains](/manage/custom-domains), [SFTP](/manage/files), [database access](/manage/database), [backups](/manage/backup), and the [firewall](/manage/firewall)
+- Exposing a [missing environment variable](#missing-environment-variables) or reviewing a new [SFTP folder mount](#editing-app-files-or-source-code)
+
+Email [hello@pikapods.com](mailto:hello@pikapods.com) (or click *Report Issue* on your pod card) any time—we generally reply within a few hours on working days.
+
+**What we can't cover** is how to use an app's features, configure third-party plugins/themes, troubleshoot bugs inside the app itself, or do custom data migrations.
+
+:::tip[Not sure which side an issue is on?]
+Start with our [Troubleshooting](/manage/debug) guide. If *View Logs* points to a hosting or update problem—or you're still unsure—feel free to reach out and we'll check that your pod is healthy.
+:::
+
+For help with the app itself, here are the best places to go, roughly in order:
+
+### 1. Quick Self-Help
+- **PikaPods App Help**: Many apps have an [App Help](/apps) page covering common setup steps and PikaPods-specific tips (also linked via *FAQ* on your pod card).
+- **Official documentation**: Follow the *Project Page* link for your app to read the upstream docs. When editing *⚙️ Edit Pod Settings* > *Env Vars*, you'll also find a direct link to the app's official settings documentation.
+- **Ask an AI assistant**: Paste the app name, what you're trying to do, and the relevant error lines from *View Logs* (or a screenshot) into an AI tool like ChatGPT or Claude to explain errors, check known issues, or suggest config fixes. Remove any passwords or API keys before pasting, and take a [backup](/manage/backup) before running any database changes it suggests.
+
+### 2. Ask the App's Community & Maintainers
+- **Community forum or chat**: Most open-source apps have a Discord, Matrix room, forum, Reddit, or GitHub Discussions where other users share setups and workarounds. When asking, mention the app version, include the relevant log snippet, and note that you're running the official Docker image.
+- **GitHub Issues**: Search the project's existing issues first—common errors often already have a fix or workaround posted. If you've found a reproducible bug or want to request a feature, open a new issue there.
+
+### 3. Dedicated or Paid Help
+- **Commercial support from the authors**: Many open-source projects offer paid support plans or consulting. It gets you help directly from the people who build the app and funds its ongoing development.
+- **Hire a freelancer**: For complex setups, custom themes, or migrations, sites like [Upwork](https://www.upwork.com/) are a practical way to hire an experienced sysadmin or developer—even for a small, one-off task.
 
 
 ## Editing App Files or Source Code
